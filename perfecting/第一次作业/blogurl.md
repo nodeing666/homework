@@ -1,1 +1,1 @@
-- 如何连接两个或者两个以上字符串？:[http://gloveyy.gotoip11.com/FE/html-1.html]
+- 如何连接两个或者两个以上字符串？:[http://yeye.run/FE/html-1.html]

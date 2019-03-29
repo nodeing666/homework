@@ -1,0 +1,102 @@
+.about-banner{
+	background:url(../image/news/整体装修一站式服务.png) no-repeat;
+}
+.main .about-summary{
+	width:657px;
+	font-size:20px;
+	line-height:30px;
+	color:#808080;
+	padding:28px 97px 30px 64px;
+}
+.main .about-slogan{
+	margin-bottom:0px;
+}
+.main .advantage-title{
+	height:124px;
+	border-bottom:1px solid #ededed;
+}
+.main .company-advantage .advantage-title img{
+	margin:59px 20px 14px 11px;
+}
+.main .company-advantage .advantage-title .advantage-point{
+	display:inline-block;
+	font-size:32px;
+	font-weight:bold;
+	line-height:24px;
+	margin:73px 0 19px;
+	color:#cf010e;
+}
+.main .company-advantage .advantage-item{
+	padding:64px 30px 0 22px;
+}
+.company-advantage .advantage-item .each-item{
+	float:left;
+	
+	height:68px;
+	background-color:#cccccc;
+	margin-right:2px;
+	padding:55px 0px 57px 0px;
+}
+.company-advantage .advantage-item .each-item:last-child{
+	margin-right:0;
+}
+.company-advantage .advantage-item .each-item.pl-60{
+	width:175px;
+	padding-left:60px;
+}
+.company-advantage .advantage-item .each-item.pl-51{
+	width:184px;
+	padding-left:51px;
+}
+.company-advantage .advantage-item .each-item.pl-31{
+	width:204px;
+	padding-left:31px;
+}
+.company-advantage .advantage-item .each-item span{
+	display:block;
+}
+.company-advantage .advantage-item .each-item span.num{
+	font-size:32px;
+	line-height:24px;
+	color:#cf010e;
+	margin-bottom:25px;
+}
+.company-advantage .advantage-item .each-item span.num.indent6{
+	text-indent:6px;
+}
+.company-advantage .advantage-item .each-item span.num.indent19{
+	text-indent:19px;
+}
+.company-advantage .advantage-item .each-item span.num.indent32{
+	text-indent:32px;
+}
+.company-advantage .advantage-item .each-item span.num.indent6{
+	text-indent:15px;
+}
+.company-advantage .advantage-item .each-item span.char{
+	font-size:18px;
+	line-height:24px;
+	font-weight:bold;
+	color:#000000;
+}
+/**/
+.main .advantage-technology{
+	width:1005px;
+	height:234px;
+	margin:56px 83px 60px 110px;
+}
+.main .advantage-technology img{
+	float:left;
+}
+.main .advantage-technology img:first-child{
+	margin-right:56px;
+}
+.main .advantage-technology img:nth-child(2){
+	margin-right:57px;
+}
+.main .advantage-technology img:nth-child(3){
+	margin-right:53px;
+}
+.main .advantage-technology img:last-child{
+	margin-right:0;
+}

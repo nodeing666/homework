@@ -1,0 +1,14 @@
+1.html文件包括：
+（1）网站首页：index.html
+（2）新闻中心：news.html
+（3）装修案例：case.html
+（4）设计团队:team.html
+（5）装修百科:knowledge.html
+（6）人才招聘:recruitment.html
+（7）关于我们:about.html
+2.css文件包括
+（1）重置样式：reset.css
+（2）公共样式：common.css
+（3）各自html的独立css样式，共七个
+3.公共部分包括：public-header（头部）、public-footer（尾部）、banner（）
+4.搭建页面结构

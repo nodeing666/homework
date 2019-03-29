@@ -1,0 +1,27 @@
+/*重置样式*/
+*{
+	margin:0;
+	padding:0;
+}
+ul,ol,li{
+	list-style:none;
+}
+a{
+	text-decoration:none;
+	color:#000;
+}
+img{
+	border:none;
+	display:block;
+}
+.clearfix{
+	zoom:1;
+}
+.clearfix:after{
+	content:'';
+	display:block;
+	height:0;
+	visibility:hidden;
+	clear:both;
+}
+

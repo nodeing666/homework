@@ -1,0 +1,71 @@
+.recruitment-banner{
+	background:url(../image/news/整体装修一站式服务.png) no-repeat;
+}
+.main{
+	margin-bottom:30px;
+}
+.main .cruitment-mb-0{
+	margin-bottom:0;
+}
+.main .cruitment-idea{
+	width:818px;
+	text-align:center;
+	padding:28px 0 30px 0;
+	font-size:20px;
+	color:#808080;
+	line-height:30px;
+}
+.main .cruitment-idea span{
+	font-size:22px;
+	font-weight:bold;
+	color:#cf010e;
+}
+.main .contact{
+	font-size:14px;
+	line-height:30px;
+	text-align:center;
+	padding:6px 0 5px 0;
+	border-bottom:1px solid #d9d9d9;
+	margin-bottom:11px;
+}
+.main .contact span{
+	font-weight:bold;
+	color:#666666;
+}
+.main .each-position{
+	float:left;
+	position:relative;
+	width:392px;
+	height:326px;
+	padding:30px 57px 30px 50px;
+}
+.main .each-position:nth-child(2n+1){
+	border-right:1px solid #d9d9d9;
+}
+.main .each-position.border-bot{
+	border-bottom:1px solid #d9d9d9;
+}
+.main .each-position ul{
+	font-size:14px;
+	line-height:24px;
+	color:#808080;
+}
+.main .each-position ul:first-child{
+	margin-bottom:22px;
+}
+.main .each-position ul li span{
+	color:#4c4c4c;
+	font-weight:bold;
+}
+.main .each-position .red-tag{
+	position:absolute;
+	top:30px;
+	left:0px;
+	width:5px;
+	height:34px;
+	background-color:#cf010e;
+}
+.main .each-position.right-red .red-tag{
+	top:30px;
+	left:495px;
+}

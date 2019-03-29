@@ -1,0 +1,222 @@
+.index-banner{
+	background:url(../image/banner.png) no-repeat;
+}
+/*company-profile部分*/
+.company-profile{
+	width:1200px;
+	height:280px;
+	background-color:#474747;
+}
+.company-profile .livingroom-pic{
+	width:341px;
+	height:227px;
+	margin:22px 36px 31px 39px;
+	background:url(../image/圆.png) 60px 4px no-repeat;
+}
+.company-profile .title{
+	width:465px;
+	height:26px;
+	font-size:24px;
+	color:#cf010e;
+	line-height:21px;
+	margin-top:77px;
+	margin-bottom:31px;
+}
+.company-profile .content{
+	width:685px;
+	height:86px;
+	margin-bottom:60px;
+	font-size:12px;
+	line-height:21px;
+	color:#d9d9d9;
+}
+/*main-content部分*/
+/*.main-content .case-show{
+	margin-top:44px;
+}*/
+.case-show .show-title,.designer .show-title{
+	width:1200px;
+	text-align:center;
+}
+.case-show .show-title h3,.designer .show-title h3{
+	margin-top:44px;
+	font-size:32px;
+	line-height:25px;
+}
+.case-show .show-title p,.designer .show-title p{
+	font-size:16px;
+	line-height:25px;
+	background:url(../image/椭圆2拷贝.png) 0 12px no-repeat;
+}
+.case-show .show-title .more,.designer .show-title .more{
+	display:block;
+	width:48px;
+	height:9px;
+	margin-top:4px;
+	margin-bottom:25px;
+	margin-right:140px;
+	background:url(../image/more.png);
+}
+.case-show .decoration-style{
+	margin-left:11px;
+	margin-bottom:30px;
+	
+}
+.case-show .decoration-style .style-item{
+	float:left;
+	width:88px;
+	height:32px;
+	font-size:14px;
+	line-height:32px;
+	text-align:center;
+	color:#9a9a9a;
+	border:1px solid #808080;
+	margin-left:29px;
+}
+.case-show .decoration-style .style-item.ml-28{
+	margin-left:28px;
+}
+/*designer-content部分*/
+.designer-content{
+	width:1200px;
+	height:440px;
+	margin-bottom:;
+	background:url(../image/底图.png) no-repeat;
+}
+.designer-content .designer-item{
+	margin-top:58px;
+	margin-bottom:62px;
+}
+.designer-content .designer-item.mr13{
+	margin-right:13px;
+}
+.designer-content .designer-item.mr12{
+	margin-right:12px;
+}
+/*main-content中的middle-slogans部分*/
+.main-content .middle-slogans{
+	width:1200px;
+	height:130px;
+	margin:60px 0;
+	background:url(../image/中间图.png) no-repeat;
+}
+/*main-content中的customer部分*/
+.customer-menu{
+	width:650px;
+}
+.customer-menu .title{
+	margin-bottom:13px;
+	font-size:32px;
+	color:#333333;
+	font-weight:bold;
+}
+.customer-menu .title span{
+	font-weight:normal;
+	font-size:30px;
+	font-family:"Arial";
+	color:#666666;
+	margin-left:1px;
+}
+.customer-menu img.more{
+	margin-top:21px;
+}
+.customer-menu .menu-list{
+	margin-bottom:60px;
+}
+.customer-menu .menu-list table{
+	width:650px;
+	height:363px;
+	text-align:center;
+	border-collapse: collapse;
+	background-color:#f0f0f0;
+}
+.customer-menu .menu-list table thead tr{
+	width:650px;
+	height:42px;
+	background-color:#6d6a6a;
+	font-size:14px;
+	font-family:"宋体";
+	color:#ffffff;
+}
+.customer-menu .menu-list table thead tr td{
+	border-right:1px solid #666;
+}
+.customer-menu .menu-list table tbody{
+	height:321px;
+	padding:27px 48px 35px 29px;
+}
+.customer-menu .menu-list table tbody td{
+	border-right:1px solid #ffffff;
+}
+.customer-menu .menu-list table tr td:last-child{
+	border-right:none;
+}
+.customer-application{
+	margin-left:26px;
+}
+.customer-application .app-title{
+	height:32px;
+	font-size:32px;
+	font-weight:bold;
+	color:#333333;
+	margin-bottom:21px;
+}
+.customer-application .app-title span{
+	font-size:30px;
+	font-family:"Arial";
+	font-weight:normal;
+	color:#666666;
+
+}
+.customer-application form span{
+	font-size:12px;
+	color:#666;
+	margin-left:3px;
+}
+.customer-application form input[type="text"]{
+	width:318px;
+	height:32px;
+	margin-top:10px;
+	margin-bottom:16px;
+	outline:none;
+	background-color:#eeeeee;
+	border:1px dashed #b3b3b3;
+}
+.customer-application form input[type="submit"]{
+	width:318px;
+	height:32px;
+	font-size:18px;
+	color:#ffffff;
+	outline:none;
+	background-color:#333333;
+	border:none;
+	margin-top:10px;
+}
+/*news部分*/
+.main-content .news{
+	margin-top:48px;
+}
+.main-content .news .information,.main-content .news .dynamics{
+	margin-right:35px;
+}
+.news .title{
+	margin-left:40px;
+	margin-bottom:15px;
+}
+.news .detail{
+	margin-left:12px;
+}
+.news .detail li{
+	list-style:square;
+	list-style-position: inside;
+	font-size:12px;
+	color:#676767;
+	font-family:"宋体";
+	line-height:26px;
+}
+.news .more{
+	margin:24px 130px 31px 130px;
+}
+
+
+

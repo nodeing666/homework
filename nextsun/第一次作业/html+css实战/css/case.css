@@ -1,0 +1,9 @@
+.case-banner{
+	background:url(../image/case/整体装修一站式服务.png);
+}
+/*case-page 不同样式*/
+.main .case-page{
+	width:508px;
+	margin-top:35px;
+	margin-bottom:45px;
+}

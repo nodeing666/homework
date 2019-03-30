@@ -1,0 +1,10 @@
+article{
+}
+.controledarticle article{
+	display: none;
+}
+.controledarticle article.current{
+	display: block;
+	width: 1200px;
+	margin: auto;
+}

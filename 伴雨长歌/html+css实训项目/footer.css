@@ -1,0 +1,61 @@
+footer{
+	height: 230px;
+	background-color: #333;
+	overflow: hidden;
+}
+footer ul{
+	margin: 30px auto;
+}
+footer ul li{
+	width: 300px;
+	height: 90px;
+	border: 1px solid #eee;
+	float: left;
+	position: relative;
+}
+footer ul li:nth-child(2){
+	margin: 0px 50px;
+}
+footer ul li img{
+	position: absolute;
+	left: 14px;
+	bottom: -7px;
+}
+footer ul li h4{
+	color: #d9d9d9;
+	font-size: 14px;
+	position: absolute;
+	left: 72px;
+	top: 15px;
+
+}
+footer ul li p{
+	color: #a6a6a6;
+	font-size: 12px;
+	position: absolute;
+	left: 72px;
+	top: 40px;
+}
+footer>div>p{
+	font-size: 12px;
+	color: #a6a6a6;
+	margin-left: 270px;
+}
+footer>div{
+	position: relative;
+}
+footer>div>img{
+	position: absolute;
+	right: 50px;
+	bottom: 50px;
+}
+.footer-introduce{
+	width: 610px;
+	height: 34px;
+	line-height: 34px;
+	margin: 5px auto;
+}
+.footer-introduce span{
+	margin: auto 3px;
+	color: #a6a6a6;
+}

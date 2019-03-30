@@ -1,0 +1,173 @@
+.tecbox{
+	margin-bottom: 40px;
+}
+.baike-header{
+	margin-top: 22px;
+}
+
+.baikebox{
+	position: relative;
+}
+.baikebox img{
+	position: absolute;
+	left: 260px;
+	top: 14px;
+}
+.baikebox h6{
+	position: absolute;
+	left: 275px;
+	top: 50px;
+	font-size: 14px;
+}
+.baikebox s{
+	width: 50px;
+	height: 1px;
+	border-bottom: 1px solid #CF010E;
+	position: absolute;
+	left: 350px;
+	top: 60px;
+}
+.baikebox h6{
+	position: absolute;
+	font-weight: 400;
+}
+.baikebox li:nth-child(2) img{
+	left: 404px;
+}
+.baikebox li:nth-child(2) h6{
+	left: 420px;
+}
+.baikebox li:nth-child(2) s{
+	left: 494px;
+}
+.baikebox li:nth-child(3) img{
+	left: 546px;
+}
+.baikebox li:nth-child(3) h6{
+	left: 562px;
+}
+.baikebox li:nth-child(3) s{
+	left: 636px;
+}
+.baikebox li:nth-child(4) img{
+	left: 690px;
+}
+.baikebox li:nth-child(4) h6{
+	left: 705px;
+}
+.baikebox li:nth-child(4) s{
+	left: 780px;
+}
+.baikebox li:nth-child(5) img{
+	left: 834px;
+}
+.baikebox li:nth-child(5) h6{
+	left: 850px;
+}
+.baikebox li:nth-child(5) s{
+	left: 926px;
+}
+.baikebox li:nth-child(6) s{
+	left: 206px;
+}
+
+
+.tecbox .tectop {
+	margin-top: 12px;
+}
+.tecbox .tectop .tec1{
+	float: left;
+}
+.tecbox .tectop .tec2{
+	float: right;
+	width: 480px; 
+}
+.tecbox .tectop .tec1 img{
+	width: 480px;
+}
+
+.tecbox .tectop .tec2 li:first-child{
+	height: 160px;
+	border: none;
+	line-height: 20px;
+}
+.tecbox .tectop .tec2 li:first-child span{
+	display: inline-block;
+	width: 84px;
+	height: 26px;
+	line-height: 26px;
+	text-align: center;
+	font-size: 16px;
+	font-weight: 700;
+	color: #FFFFFF;
+	background-color: #cf010e;
+}
+.tecbox .tectop .tec2 li:first-child h3{
+	display: inline;
+	font-size: 16px;
+	margin-left: 10px;
+}
+.tecbox .tectop .tec2 li:first-child p{
+	font-size: 12px;
+	margin-top: 28px;
+	line-height: 26px;
+	color: #666666;
+}
+.tecbox .tectop .tec2 li{
+	border-bottom: 1px solid rgba(0,0,0,.2);
+	height: 36px;
+	line-height: 36px;
+}
+.tecmiddle .tec3{
+	width: 480px;
+	margin-top: 25px;
+	float: left;
+}
+.tecmiddle .tec3 .tec3-header div,.tecbottom .tec3 .tec3-header div{
+	width: 400px;
+}
+.teccommon ul li{
+	height: 38px;
+	font-size: 12px;
+	border-bottom: 1px solid rgba(0,0,0,.2);
+	line-height: 38px;
+}
+.teccommon ul .tecfirstli{
+	margin-top: 10px;
+	height: 170px;
+	border: none;
+}
+.teccommon ul .tecfirstli img{
+	float: left;
+}
+.teccommon ul .tecfirstli h3{
+	position: relative;
+	left: 10px;
+	font-size: 18px;
+}
+.teccommon ul .tecfirstli p{
+	margin-top: 30px;
+	position: relative;
+	left: 10px;
+	font-size: 12px;
+	color: #666;
+	line-height: 18px;
+}
+.teccommon ul li s{
+	text-decoration: none;
+	float: right;
+}
+.tecmiddle .tec4{
+	float: right;
+}
+.tecbottom{
+	margin-top: 30px;
+}
+.tecbottom .tec5{
+	width: 480px;
+	float: left;
+}
+.tecbottom .tec6{
+	width: 480px;
+	float: right;
+}

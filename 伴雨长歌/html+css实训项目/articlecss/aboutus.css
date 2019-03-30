@@ -1,0 +1,78 @@
+.aboutus-box{
+	position: relative;
+}
+.aboutus-box s{
+	text-decoration: none;
+	position: absolute;
+	display: inline-block;
+	width: 676px;
+	height: 60px;
+	left: 234px;
+	top: 28px;
+	line-height: 30px;
+	color: #808080;
+	font-size: 20px;
+}
+.last111{
+	height: 80px;
+	margin-top: 40px;
+	background: url(../img/aboutus/la22实力.png) no-repeat 10px 10px;
+}
+.last333{
+	height: 80px;
+	margin-top: 10px;
+	background: url(../img/aboutus/la11.png) no-repeat 10px 10px;
+}
+.last111 p,.last333 p{
+	font-size: 32px;
+	color: #cf010e;
+	font-weight: 700;
+	transform: translate(80px,50%);
+}
+.last222{
+	height: 280px;
+}
+.last222 li{
+	width: 236px;
+	height: 182px;
+	float: left;
+	margin-left: 5px;
+	position: relative;
+	text-align: center;
+	background-color: #ccc;
+}
+.last222 ul{
+	position: absolute;
+	left: 16px;
+	top: 50px;
+}
+.last222 ul li h3{
+	font-size: 32px;
+	margin-top: 40px;
+	color: #CF010E;
+}
+.last222 ul li p{
+	font-size: 18px;
+	margin-top: 24px;
+}
+.last333{
+	height: 80px;
+}
+.last444{
+	overflow: hidden;
+	height: 330px;
+}
+.last444 li{
+	float: left;
+	margin-left: 40px;
+}
+.last444 li:first-child{
+	margin-left: 24px;
+}
+.last444 li img{
+	width: 208px;
+	height: 230px;
+}
+.last444 ul{
+	margin-top: 40px;
+}

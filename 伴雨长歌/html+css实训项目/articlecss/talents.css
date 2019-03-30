@@ -1,0 +1,57 @@
+#zhaopin{
+	color: #666;
+	text-align: center;
+	margin: 10px auto;
+	padding:10px 0;
+	border-bottom: 1px solid #ccc;
+}
+.zhaopin-header h2{
+	color: #808080;
+	font-size: 20px;
+	display: inline-block;
+	width: 820px;
+	height: 70px;
+	position: absolute;
+	top: 25px;
+	text-align: center;
+}
+.zhaopin-header s{
+	color: #cf010e;
+	font-size: 22px;
+	text-decoration: none;
+}
+.talents-mainbody{
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
+.talents-mainbody ul{
+	margin-top: 20px;
+}
+.talents-mainbody>li{
+	width: 50%;
+	float: left;
+	font-size: 14px;
+	line-height: 20px;
+	padding: 0 50px 50px;
+	color: #808080;
+}
+.talents-mainbody>li p{
+	margin-top: 35px;
+}
+.talents-mainbody>li b{
+	color: #4c4c4c;
+}
+.talents-mainbody>li:first-child{
+	border-right: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;
+}
+.talents-mainbody>li:nth-child(2){
+	border-bottom: 1px solid rgba(0,0,0,0);
+}
+.talents-mainbody>li:last-child{
+	border-top: 1px solid #ccc;
+	border-left: 1px solid #ccc;
+	position: relative;
+	left: -1px;
+	top: -1px;
+}

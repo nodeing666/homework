@@ -1,0 +1,56 @@
+.teambox{
+	overflow: hidden;
+}
+.teambox s{
+	position: absolute;
+	left: 300px;
+	top: 35px;
+	font-size: 20px;
+	text-decoration: none;
+}
+.teambox ul{
+	left: 181px;
+	width: 1000px;
+	bottom: 0;
+	position: absolute;
+	border-top: 1px solid rgba(0,0,0,.2);
+	border-right: 1px solid rgba(0,0,0,.2);
+}
+.teambox ul li{
+	float: left;
+	margin: 5px 14px 0;
+	padding: 0 10px;
+	font-size: 9px;
+	line-height: 30px;
+	text-align: center;
+	
+}
+.teambox ul li.current{
+	background-color: #cf010e;
+	color: #FFFFFF;
+}
+.teambox ul li:first-child{
+	margin-left: -1px;
+	position: relative;
+	width: 97px;
+	height: 40px;
+	border-right: 1px solid rgba(0,0,0,.2);
+}
+.team-imgbox{
+	margin-top: 34px;
+}
+.team-imgbox li a img{
+	width: 190px;
+	height: 320px;
+	margin-left: 12px;
+	float: left;
+	margin-bottom: 10px;
+}
+.team-imgbox li:nth-child(5n-4) img{
+	margin-left: 0;
+}
+.team-bar{
+	margin-left: 470px;
+	margin-top: 30px;
+	margin-bottom: 30px;
+}

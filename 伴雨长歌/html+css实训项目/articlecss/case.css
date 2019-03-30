@@ -1,0 +1,45 @@
+.casebox table{
+	position: absolute;
+	right: 70px;
+	top: 0;
+	font-size: 16px;
+}
+.casebox table th{
+	font-weight: 400;
+}
+.casebox table tr{
+	border-bottom: 1px solid #000000;
+}
+.casebox table tr td:last-child{
+	font-size: 14px;
+}
+.casebox table tr td a:first-child{
+	font-size: 16px;
+}
+.casebox table tr a,.casebox table th{
+	display: inline-block;
+	margin: 9px 15px;
+}
+.article-case-imgbox{
+	margin-top: 20px;
+}
+.article-case-imgbox img{
+	width: 320px;
+	height: 210px;
+	float: left;
+	margin-bottom: 20px;
+}
+.article-case-imgbox li:nth-child(3n-1) img{
+	margin-left: 20px;
+	margin-right: 20px;
+}
+.article-case-bar {
+	margin: 15px 360px 46px;
+}
+.article-case-bar li{
+	float: left;
+	border: 1px solid #000000;
+	font-size: 16px;
+	padding: 5px 9px;
+	margin-left: 6px;
+}

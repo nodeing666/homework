@@ -1,0 +1,236 @@
+/* 对所有的图片下方的红框的样式 */
+.controledarticle>article>span{
+	display: block;
+	width: 100%;
+	height: 8px;
+	background-color: #cf010e;
+}
+.controledarticle>article>img{
+	vertical-align: middle;
+}
+
+.welcome{
+	height: 280px;
+	background-color: #474747;
+}
+.welcome img{
+	margin-top: 30px;
+}
+.welcome h2{
+	position: absolute;
+	font-size: 24px;
+	color: #cf010e;
+	top: 80px;
+	left: 315px;
+}
+.welcome p{
+	position: absolute;
+	font-size: 12px;
+	color: #d9d9d9;
+	top: 130px;
+	left: 315px;
+	line-height: 24px;
+}
+.home-caseshow{
+	text-align: center;
+	position: relative;
+}
+.home-caseshow>img{
+	position: relative;
+	top: -22px;
+}
+.home-caseshow>h2{
+	font-size: 32px;
+	color: #333;
+	margin-top: 32px;
+}
+.home-caseshow>p{
+	font-size: 14px;
+	margin-top: 5px;
+}
+.home-caseshow>a{
+	font-size: 12px;
+	position: absolute;
+	right: 140px;
+	bottom: -5px;
+}
+.home-label{
+	text-align: center;
+	line-height: 30px;
+}
+.home-label>li{
+	width: 90px;
+	height: 33px;
+	border: 1px solid #000000;
+	float: left;
+	margin: 20px 15px;
+}
+.home-label>li:first-child{
+	margin-left: 35px;
+}
+.home-label>li>a{
+	display: inline-block;
+	width: 100%;
+	height: 100%;
+}
+.home-caseimg>li{
+	margin: 10px;
+	float: left;
+}
+.home-caseimg>li:nth-child(1),.home-caseimg>li:nth-child(4){
+	margin-left: 0px;
+}
+.home-caseimg>li:nth-child(3n){
+	margin-right: 0px;
+}
+.home-designershow{
+	background-image: url(../img/homepage/底图.png);
+	width: 1200px;
+	height: 440px;
+	margin-top: 20px;
+}
+.home-designershow li{
+	float: left;
+	margin: 58px 6px;
+}
+.home-designershow li:first-child{
+	margin-left: 0;
+}
+.home-designershow li:last-child{
+	margin-right: 0;
+}
+.icansee>img{
+	margin: 60px 0;
+}
+
+.home-news-header{
+
+}
+.home-news-header .home-news-headerleft{
+	height: 416px;
+	width: 650px;
+	float: left;
+	position: relative;
+}
+.home-news-header .home-news-headerleft h2{
+	display: inline;
+	font-size: 32px;
+}
+.home-news-header .home-news-headerleft h3{
+	font-size: 30px;
+	font-weight: 400;
+	display: inline;
+}
+.home-news-header .home-news-headerleft img{
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+.home-news-header .home-news-headerleft table{
+	text-align: right;
+}
+.home-news-header .home-news-headerright{
+	width: 320px;
+	height: 416px;
+	float: right;
+}
+
+.home-news-headerleft th,.home-news-headerleft td{
+	height: 42px;
+} 
+
+.home-news-headerleft thead{
+	background-color: #6c6b69;
+	color: #FFFFFF;
+	text-align: center;
+}
+.home-news-headerleft thead th{
+	padding: 2px 27px;
+}
+.home-news-headerleft tbody{
+	background-color: #f0f0f0;
+	text-align: center;
+}
+.home-news-headerleft tbody td{
+	border-left: 1px solid #fff;
+}
+
+
+.home-news-header .home-news-headerright h2{
+	display: inline;
+	font-size: 32px;
+	margin-left: 25px;
+}
+.home-news-header .home-news-headerright h3{
+	font-size: 30px;
+	font-weight: 400;
+	display: inline;
+}
+.home-news-header .home-news-headerright ul p{
+	margin-top: 20px;
+	font-size: 12px;
+	color: #666666;
+}
+.home-news-header .home-news-headerright ul input{
+	margin-top: 10px;
+	outline: none;
+	border: 1px dashed #ccc;
+	width: 320px;
+	height: 34px;
+}
+.home-news-headerright>input{
+	width: 320px;
+	margin-top: 30px;
+	height: 40px;
+	background-color: black;
+	color: #FFFFFF;
+	border: 0;
+	cursor: pointer;
+}
+
+.home-news-footer>div{
+	text-align: center;
+	float: left;
+	width: 310px;
+	margin: 60px 0 30px;
+}
+.home-news-footer>div:nth-child(2){
+	margin: 60px 34px 30px;
+}
+.home-news-footer>div>img:first-child{
+	margin-bottom: 10px;
+}
+.home-news-footer>div ul li{
+	margin-left: 10px;
+	text-align: left;
+	font-size: 12px;
+	line-height: 22px;
+}
+.home-medals ul{
+	height: 140px;
+	background-color: #f0f0f0;
+}
+.home-medals li{
+	width: 150px;
+	height: 70px;
+	display: inline-block;
+	float: left;
+	margin: 40px 8px 0;
+	text-align: center;
+	text-align: left;
+	position: relative;
+	
+}
+.home-medals li:first-child{
+	margin-left: 12px;
+}
+.home-medals li span{
+	display: inline-block;
+	width: 80px;
+	height: 70px;
+	position: absolute;
+	top: 12px;
+	left: 60px;
+}
+
+

@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <link rel="stylesheet" href="../css/header.css">
+  <link rel="stylesheet" href="../css/footer.css">
+  <style type="text/css">
+    .content{
+      margin-top: 35px;
+      width: 100%;
+      margin-bottom: 45px;
+    }
+    .content-decorate{
+      height: 120px;
+      width: 1000px;
+      margin-left: 100px;
+      display: inline-block;
+      border: 1px solid #d9d9d9;
+      clear: right;
+    }
+    .case-left{
+      height: 120px;
+      width: 180px;
+      background-color: #e6e6e6;
+      display: inline-block;
+      float: left;
+    }
+
+    .case-left p{
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+    .case-left p:nth-of-type(1){
+      font-size: 32px;
+      color: #d56065;
+      line-height: 100px;
+    }
+    .case-left p:nth-of-type(2){
+      font-size: 14px;
+      color: #000000;
+      margin-top: -25px;
+    }
+    .case-right{
+      width: 818px;
+      float: right;
+      height: 120px;
+    }
+    .case-clear{
+      clear: both;
+    }
+    .case-style{
+      height: 40px;
+      border-bottom: 1px solid #ccc;
+      line-height: 40px;
+      clear: right;
+    }
+    .case-style:last-child{
+      border: none;
+    }
+    .case-style span {
+      display: inline-block;
+      width: 93px;
+      border-right: 1px solid #ccc;
+      text-align: center;
+      font-size: 16px;
+      color: #4d4d4d;
+    }
+
+    .case-style ul{
+      float: right;
+    }
+    .case-style ul li{
+      display: inline-block;
+      list-style: none;
+    }
+    .case-style ul li a{
+      text-decoration: none;
+      display: block;
+      height: 25px;
+      width: 72px;
+      text-align: center;
+      line-height: 25px;
+      margin-right: 2px;
+      color: #4d4d4d;
+    }
+    .case-style ul li .active{
+      color: white;
+      background-color: red;
+    }
+
+    .case-logo{
+      margin-top: 34px;
+      text-align: center;
+    }
+    .case-logo ul{
+      margin-top: 24px;
+    }
+    .case-logo ul li{
+      list-style: none;
+      display: inline-block;
+      width: 320px;
+      height: 213px;
+      margin-left: 10px;
+    }
+    .case-logo ul li img{
+      width: 320px;
+      height: 213px;
+    }
+    .case-logo ul li span{
+      background-color: #4b4949;
+      font-size: 16px;
+      color: #e6e6e6;
+      display: block;
+      height: 32px;
+      margin-top: -5px;
+      line-height: 32px;
+      opacity: 0.7;
+    }
+    .case-jump{
+      margin-top: 35px;
+    }
+    .case-jump ul li{
+      display: inline-block;
+      list-style: none;
+      width: 36px;
+      height: 32px;
+      margin-right: 8px;
+    }
+    .case-jump ul{
+      text-align: center;
+    }
+    .case-jump ul li a{
+      width: 36px;
+      height: 32px;
+      border: 1px solid #d9d9d9;
+      display: inline-block;
+      text-decoration: none;
+      text-align: center;
+      line-height: 32px;
+      color: #4d4d4d;
+    }
+    .case-jump ul li:nth-of-type(1) a{
+      background-color: red;
+      color: white;
+      font-weight: bold;
+    }
+    .case-jump ul li:last-child a{
+      padding: 0 13px;
+    }
+  </style>
+</head>
+<body>
+  <div class="decorate">
+    <div class="header">
+      <div class="header-top">
+        <div class="header-left">
+          <span>欢迎来到后小钉装饰设计官网</span>
+        </div>
+        <div class="header-right">
+          分享到:
+          <ul>
+            <li><a href=""><img src="../images/header/qq.png" alt=""></a></li>|
+            <li><a href=""><img src="../images/header/qz.png" alt=""></a></li>|
+            <li><a href=""><img src="../images/header/we.png" alt=""></a></li>|
+            <li><a href=""><img src="../images/header/wb.png" alt=""></a></li>|
+            <li><a href=""><img src="../images/header/db.png" alt=""></a></li>
+          </ul>
+
+          <div class="zixun">
+            <span>咨询热线：4000-999-8888</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="header-content">
+        <div class="header-logo">
+          <img src="../images/header/logo.png" alt="">
+        </div>
+
+        <div class="header-title">
+          <img src="../images/header/品质标语.png" alt="">
+        </div>
+
+        <div class="header-search">
+          <select class="search-logo" >
+            <option value="" >装修设计</option>
+          </select>
+          请输入关键字
+        </div>
+      </div>
+
+      <div class="header-nav">
+        <ul>
+          <li><a href="../html/about.html">关于我们</a></li>
+          <li><a href="../html/recruitment.html">人才招聘</a></li>
+          <li><a href="../html/wikipedia.html">装修百科</a></li>
+          <li><a href="../html/team.html">设计团队</a></li>
+          <li class="active"><a href="../html/decorate.html">装饰案列</a></li>
+          <li><a href="../html/news.html">新闻中心</a></li>
+          <li><a href="../html/index.html">网站首页</a></li>
+        </ul>
+      </div>
+
+      <div class="banner">
+        <img src="../images/decorate/decortate.png" alt="">
+      </div>
+    </div>
+
+    <div class="content">
+      <div class="content-decorate">
+        <div class="decorate-case">
+          <div class="case-left">
+            <p>装修案例</p>
+            <p>Case show</p>
+          </div>
+
+          <div class="case-right">
+            <div class="case-style">
+              <span>风格</span>
+              <ul>
+                <li><a href="" class="active">全部</a></li>
+                <li><a href="">现代简约</a></li>
+                <li><a href="">中式</a></li>
+                <li><a href="">新古典</a></li>
+                <li><a href="">欧式</a></li>
+                <li><a href="">地中海</a></li>
+                <li><a href="">现代奢华</a></li>
+                <li><a href="">后现代</a></li>
+                <li><a href="">其它</a></li>
+              </ul>
+            </div>
+            <div class="case-style">
+              <span>风格</span>
+              <ul>
+                <li><a href="" class="active">全部</a></li>
+                <li><a href="">现代简约</a></li>
+                <li><a href="">中式</a></li>
+                <li><a href="">新古典</a></li>
+                <li><a href="">欧式</a></li>
+                <li><a href="">地中海</a></li>
+                <li><a href="">现代奢华</a></li>
+                <li><a href="">后现代</a></li>
+                <li><a href="">其它</a></li>
+              </ul>
+            </div>
+            <div class="case-style">
+              <span>风格</span>
+              <ul>
+                <li><a href="" class="active">全部</a></li>
+                <li><a href="">现代简约</a></li>
+                <li><a href="">中式</a></li>
+                <li><a href="">新古典</a></li>
+                <li><a href="">欧式</a></li>
+                <li><a href="">地中海</a></li>
+                <li><a href="">现代奢华</a></li>
+                <li><a href="">后现代</a></li>
+                <li><a href="">其它</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="case-clear"></div>
+        </div>
+
+        <div class="case-logo">
+          <ul>
+            <li>
+              <img src="../images/case/华尔道.png" alt="">
+              <span>绿地华尔道-现代简约-三室一厅</span>
+            </li>
+            <li>
+              <img src="../images/case/简欧室内效果图.png" alt="">
+              <span>碧桂园-欧式-三室两厅</span>
+            </li>
+            <li>
+              <img src="../images/case/绿地.png" alt="">
+              <span>绿地华尔道-现代简约-三室一厅</span>
+            </li>
+          </ul>
+
+          <ul>
+            <li>
+              <img src="../images/case/晋园.png" alt="">
+              <span>晋园-现代简约-别墅</span>
+            </li>
+            <li>
+              <img src="../images/case/豪华室内设计.png" alt="">
+              <span>绿地华尔道-现代简约-三室一厅</span>
+            </li>
+            <li>
+              <img src="../images/case/豪华室内设计.png" alt="">
+              <span>绿地华尔道-现代简约-三室一厅</span>
+            </li>
+          </ul>
+          <ul>
+            <li>
+              <img src="../images/case/晋园.png" alt="">
+              <span>晋园-现代简约-别墅</span>
+            </li>
+            <li>
+              <img src="../images/case/豪华室内设计.png" alt="">
+              <span>绿地华尔道-现代简约-三室一厅</span>
+            </li>
+            <li>
+              <img src="../images/case/豪华室内设计.png" alt="">
+              <span>绿地华尔道-现代简约-三室一厅</span>
+            </li>
+          </ul>
+        </div>
+        
+        <div class="case-jump">
+          <ul>
+            <li><a href="">1</a></li>
+            <li><a href="">2</a></li>
+            <li><a href="">3</a></li>
+            <li><a href="">4</a></li>
+            <li><a href="">5</a></li>
+            <li><a href="">6</a></li>
+            <li><a href="">7</a></li>
+            <li><a href="">8</a></li>
+            <li><a href="">9</a></li>
+            <li><a href="">10</a></li>
+            <li><a href="">></a></li>
+            <li><a href="">尾页</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer">
+      <div class="footer-log">
+        <ul>
+          <li>
+            <img src="../images/footer/图层19.png" alt="">
+            <div class="footer-title">
+              <span>环保不达标</span>
+              <span>全负责</span>
+            </div>
+          </li>
+
+          <li>
+            <img src="../images/footer/图层22.png" alt="">
+            <div class="footer-title">
+              <span>售后</span>
+              <span>十次回访</span>
+            </div>
+          </li>
+          <li>
+            <img src="../images/footer/图层27.png" alt="">
+            <div class="footer-title">
+              <span>至高信用</span>
+              <span>等级AAA</span>
+            </div>
+          </li>
+          <li>
+            <img src="../images/footer/图层26.png" alt="">
+            <div class="footer-title">
+              <span class="title">优质品牌</span>
+            </div>
+          </li>
+          <li>
+            <img src="../images/footer/图层25.png" alt="">
+            <div class="footer-title">
+              <span class="title">品质保证</span>
+            </div>
+          </li>
+          <li>
+            <img src="../images/footer/图层19.png" alt="">
+            <div class="footer-title">
+              <span>至低价</span>
+              <span>承诺</span>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <div class="footer-details">
+        <div class="footer-message">
+          <ul>
+            <li>
+              <p>联系我们</p>
+              <p>热线电话:400-999-8888</p>
+              <p>官方微信:nodeing-com</p>
+              <img src="../images/footer/微信.png" alt="">
+            </li>
+            <li>
+              <p>公司地址</p>
+              <p>地址:成都市龙泉驿区总部经济港888号<br>经开区孵化园A2栋19楼</p>
+              <img src="../images/footer/眼睛.png" alt="">
+            </li>
+            <li>
+              <p>关于我们</p>
+              <p>小钉装饰工程设计有限公司是一家<br>及设计，施工软装饰为一体</p>
+              <img src="../images/footer/首页.png" alt="">
+            </li>
+          </ul>
+        </div>
+
+        <div class="footer-footer">
+          <div class="footer-nav">
+            <span>网站首页</span>｜
+            <span>新闻中心</span>｜
+            <span>装修案例</span>｜
+            <span>团队设计</span>｜
+            <span>装修百科</span>｜
+            <span>人才招聘</span>｜
+            <span>关于我们</span>
+            <p>CopyRight @2016-2018 成都小钉装饰工程设计有限公司 蜀ICP备15031208号-1</p>
+          </div>
+          <div class="footer-erweima">
+            <img src="../images/footer/二维码.png" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

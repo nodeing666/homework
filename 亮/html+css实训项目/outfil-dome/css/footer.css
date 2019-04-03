@@ -1,0 +1,92 @@
+.footer{
+  width: 100%;
+}
+.footer-log{
+  height: 141px;
+  background-color: #f0f0f0;
+}
+.footer-log ul{
+  text-align: center;
+}
+.footer-log ul li{
+  list-style: none;
+  display: inline-block;
+  width: 176px;
+  height: 54px;
+  position: relative;
+  margin: 44px 0 0 0 ;
+}
+.footer-log ul li img{
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.footer-title{
+  position: absolute;
+  margin-left: 55px;
+}
+.footer-title span{
+  font-size: 18px;
+  display: block;
+  text-align: left;
+  color: #333333;
+}
+.footer-title .title{
+  line-height: 54px;
+  color: #333333;
+}
+.footer-details{
+  width: 100%;
+  background-color: #333333;
+  height: 229px;
+}
+.footer-message ul{
+  margin: 0 0 0 120px ;
+  padding: 0;
+}
+.footer-message ul li{
+  margin-top: 40px;
+  display: inline-block;
+  width: 302px;
+  height: 88px;
+  border: 1px solid white;
+  position: relative;
+  margin-left: 35px;
+}
+.footer-message ul li p{
+  padding: 0;
+  margin: 0 0 0 60px;
+  text-align: left;
+  font-size: 14px;
+  color: #808080;
+  line-height: 20px;
+}
+.footer-message ul li p:nth-of-type(1){
+  font-size: 16px;
+  color: #fff;
+  margin-top: 16px;
+  margin-bottom: 5px;
+}
+.footer-message ul li img{
+  position: absolute;
+  top: 56px;
+  left: 10px;
+}
+
+.footer-footer{
+  position: relative;
+}
+.footer-nav{
+  margin-top: 50px;
+  text-align: center;
+  font-size: 16px;
+  color: #a6a6a6;
+}
+.footer-nav p{
+  font-size: 10px;
+}
+.footer-erweima{
+  position: absolute;
+  right: 200px;
+  bottom: 8px;
+}

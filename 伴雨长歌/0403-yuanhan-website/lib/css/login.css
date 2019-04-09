@@ -1,0 +1,67 @@
+.loginbody{
+    background: url(../../images/login-bacco.png) no-repeat top center ;
+    height: 660px;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+.loginbody .typearea {
+    height: 660px;
+    position: relative;
+}
+.login-box{
+    width: 400px;
+    background-color: rgba(255, 255, 255, 0.8);
+    position: absolute;
+    left: 200px;
+    top: 60px;
+    text-align: center;
+    padding: 50px;
+}
+.login-box>h2{
+    font-size: 30px;
+    margin-top: 40px;
+}
+.login-box input{
+    border: 0;
+    outline: none;
+}
+.login-box>input{
+    margin-top: 40px;
+    width: 70%;
+    height: 46px;
+    border-radius: 23px;
+    background-color: #e78c0e;
+    font-size: 20px;
+    color: #fff;
+    cursor: pointer;
+}
+.login-box span{
+    font-size: 30px;
+    float: left;
+    color: aliceblue;
+    padding: 5px 15px 5px;
+} 
+.login-box .id,.login-box .password{
+    width: 100%;
+    height: 46px;
+    border-radius: 23px;
+    margin-top: 50px;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+.login-box .id input,.login-box .password input{
+    float: right;
+    width: 80%;
+    height: 100%;
+    font-size: 20px;
+    line-height: 20px;
+    padding-left: 10px;
+    color: #fff;
+    background: none;
+}
+.login-box .reset{
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+.login-box .reset a:hover{
+    color: red;
+}

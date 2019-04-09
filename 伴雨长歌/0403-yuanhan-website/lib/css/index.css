@@ -1,0 +1,148 @@
+
+.mainbody{
+    height: 660px;
+    margin: 0 auto;
+    background: url('../../images/index-bacco.png') no-repeat top center;
+    margin-top: 20px;
+}
+.mainbody-typearea{
+    position: relative;
+    height: 660px;
+}
+.mainbody-introduce{
+    width: 400px;
+    height: 270px;
+    position: absolute;
+    left: 0;
+    top: 120px;
+}
+.mainbody-introduce>h3{
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+.mainbody-introduce>span{
+    font-size: 30px;
+}
+.mainbody-introduce>p{
+    font-size: 16px;
+    margin-top: 10px;
+    line-height: 30px;
+    cursor: pointer;
+}
+.mainbody-introduce>p:hover{
+    color: #000;
+    transform: scale(1.03);
+    transition: all 0.5s;
+}
+.mainbody-introbox{
+    width: 400px;
+    height: 220px;
+    position: absolute;
+    left: 0;
+    bottom: 60px;
+
+}
+.mainbody-introbox>div{
+    width: 350px;
+    height: 120px;
+    background-color: #2d2249;
+    position: relative;
+}
+.mainbody-introbox>div>img{
+    height: 100px;
+    width: 100px;
+    display: inline-block;
+    margin: 10px 10px;
+}
+.mainbody-introbox>div>p{
+    position: absolute;
+    left: 130px;
+    top: 30px;
+    color: #ffffff;
+    font-size: 18px;
+    line-height: 30px;
+}
+.mainbody-introbox>ul{
+    color: #ffffff;
+    width: 100%;
+    margin-top: 20px;
+}
+.mainbody-introbox>ul>li{
+    float: left;
+    line-height: 40px;
+    text-align: center;
+    margin-left: 20px;
+}
+.mainbody-introbox>ul>li:first-child{
+    margin-left: 0px;
+}
+.mainbody-introbox>ul>li>span{
+    font-size: 20px;
+    margin-right: 5px;
+    display: inline-block;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    background-color: #00afec;
+}
+.mainbody-introbox>ul>li>a{
+    font-size: 16px;
+}
+.mainbody-nav{
+    position: absolute;
+    width: 850px;
+    right: 0;
+    top: -10px;
+    margin-top: 100px;
+}
+.mainbody-nav ul>li{
+    width: 250px;
+    height: 250px;
+    background-color: #00afec;
+    float: right;
+    margin-left: 20px;
+    margin-top: 20px;
+    text-align: center;
+    color: #fff;
+}
+.mainbody-nav ul>li>a{
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+}
+.mainbody-nav ul>li>a:hover{
+    background-color: rgba(0, 0, 0, 0.1);
+    transition: all .5s;
+}
+.mainbody-nav ul>li>a:hover p{
+    opacity: 1;
+    margin-top: -30px;
+    transition: all .5s;
+}
+.mainbody-nav ul>li>a:hover h2{
+    margin-top: 20px;
+    transition: all .5s;
+}
+.mainbody-nav ul>li>a:hover span{
+    
+    margin-top: 20px;
+    transition: all .5s;
+}
+.mainbody-nav ul>li h2{
+    font-size: 30px;
+    margin-top: 40px;
+    margin-bottom: 50px;
+    font-weight: 400;
+}
+.mainbody-nav ul>li span{
+    font-size: 60px;
+    margin-top: -20px;
+    display: inline-block;
+}
+.mainbody-nav ul>li p{
+    font-size: 16px;
+    width: 200px;
+    margin-left: 25px;
+    margin-top: -50px;
+    opacity: 0;
+}

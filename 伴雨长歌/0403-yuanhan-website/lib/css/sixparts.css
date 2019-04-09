@@ -1,0 +1,95 @@
+.bacco{
+    background: url(../../images/science-bacco.jpg) no-repeat top center;
+    height: 240px;
+    margin: 20px auto 40px;
+}
+
+.science-mainbody{
+    padding-left: 260px;
+    position: relative;
+}
+
+.science-nav{
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.science-nav ul li{
+    width: 240px;
+    height: 60px;
+    font-size: 18px;
+    line-height: 40px;
+    text-align: center;
+    color: #337ab7;
+}
+.science-nav ul li:first-child{
+    font-size: 26px;
+    color: #0082fe;
+    background-color: #d0e8ff;
+    font-weight: 400;
+    line-height: 60px;
+}
+.science-nav ul li p{
+    display: inline-block;
+    width: 200px;
+    height: 40px;
+    border-radius: 20px;
+    margin-top: 10px;
+    
+}
+.science-nav ul li p:hover{
+    background-color: #2295f6;
+    color: #fff;
+    transition: all .5s;
+}
+
+
+.science-list>ul>li{
+    width: 100%;
+    padding: 20px;
+}
+.science-list>ul>li:hover div:last-child b{
+    color: #fff;
+    background-color: #0082fe;
+    transition: all .5s;
+}
+.science-list>ul>li:hover{
+    background-color: #edf6fe;
+    transition: all .5s;
+}
+.science-list>ul>li>div:first-child{
+    float: left;
+    width: 10%;
+    height: 60px;
+    font-size: 16px;
+    text-align: center;
+    padding-top: 6px;
+    border: 1px solid #0082fe;
+    color: #0082fd;
+}
+.science-list>ul>li>div:first-child s{
+    font-size: 24px;
+    text-decoration: none;
+}
+.science-list>ul>li>div:last-child{
+    float: right;
+    width: 90%;
+    padding-left: 20px;
+}
+.science-list>ul>li>div:last-child h3{
+    font-size: 20px;
+}
+.science-list>ul>li>div:last-child p{
+    margin-top: 10px;
+    font-size: 16px;
+}
+.science-list>ul>li>div:last-child b{
+    display: inline-block;
+    width: 140px;
+    height: 30px;
+    border: 1px solid #0082fe;
+    color: #0082fe;
+    margin-top: 10px;
+    text-align: center;
+    line-height: 30px;
+}

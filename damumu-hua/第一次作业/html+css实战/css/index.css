@@ -1,0 +1,470 @@
+.container{
+	width: 1000px;
+}
+.header-top{
+	border-bottom: 1px solid #e5e5e5;
+	height: 28px;
+	line-height: 28px;
+}
+.header-top-cont{
+	font-size: 14px;
+	color: #8c8c8c;
+}
+.header-top-cont span{
+	color: #da0000;
+}
+.header-top-cont .top-right{
+	text-align: right;
+}
+.header-top-cont .top-right a{
+	color: #d1d1d1;
+}
+/*logo和nav部分*/
+.logo img{
+	margin-top: 24px;
+}
+.nav{
+	margin-top: 32px;
+	/*border: 1px solid black;*/
+	padding-left: 184px;
+}
+.nav a{
+	display: inline-block;
+	margin-left: -6px;
+	padding: 26px 18px;
+	font-size: 14px;
+	font-weight: bold;
+	/*border: 1px solid red;*/
+}
+.nav .active{
+	border-bottom: 5px solid #d90000;
+}
+/*banner部分*/
+.banner img{
+	width: 100%;
+}
+/*<!--新手指南  开设账户  流程介绍  专家服务-->*/
+.serve{
+	height: 305px;
+	text-align: center;
+}
+.serve img{
+	margin-top: 74px;
+}
+.serve p{
+	font-size: 16px;
+	margin-top: 30px;
+}
+/*关于我们和公司公告*/
+.aboutus-wrap{
+	height: 282px;
+	margin-bottom: 67px;
+}
+.aboutus{
+	border: 1px solid #e5e5e5;
+	height: 282px;
+	width: 700px;
+	padding-left: 0;
+}
+.aboutus img{
+	margin-right: 51px;
+}
+.aboutus h3{
+	margin-top: 45px;
+	font-size: 21px;
+	font-weight: bold;
+}
+.aboutus p{
+	width: 292px;
+	margin-top: 28px;
+	font-size: 12px;
+	line-height: 24px;
+	color: #c9c9c9;
+}
+.btn{
+	height: 35px;
+	width: 118px;
+	font-size: 14px;
+	color: #c9c9c9;
+	margin-top: 28px;
+}
+.notice{
+	/*border: 1px solid green;*/
+	height: 282px;
+	width: 280px;
+	margin-left: 20px;
+	padding: 0;
+}
+.panel-heading{
+	height: 56px;
+	line-height: 56px;
+}
+.panel-heading span{
+	font-size: 16px;
+	font-weight: bold;
+	padding-left: 20px;
+}
+.panel-heading a{
+	display: inline-block;
+	font-size: 12px;
+	margin-left: 148px;
+	color: #c9c9c9;
+}
+.notice .panel-body{
+	padding-bottom: 26px;
+}
+.panel-body ul{
+	/*border: 1px solid red;*/
+	margin: 0;
+	padding-left: 6px;
+	/*padding-bottom: 25px;*/
+}
+.panel-body li{
+	list-style: none;
+	font-size: 12px;
+	line-height: 36px;
+}
+.panel-body li a{
+	font-size: 12px;
+	color: #999999;
+	line-height: 36px;
+}
+/*特色模块部分*/
+.feature{
+	background: url(../img/bg.png) no-repeat;
+	height: 500px;
+	width: 100%;
+	border: 1px solid transparent;
+	/*margin-top: 67px;*/
+}
+.feature h1{
+	text-align: center;
+	margin-top: 96px;
+	font-size: 36px;
+	color: white;
+}
+.feature .row div{
+	text-align: center;
+}
+.feature .row div img{
+	margin-top: 73px;
+}
+.feature .row div p{
+	margin-top: 33px;
+	font-size: 18px;
+	color: #cb9797;
+}
+/*新闻部分*/
+.nes-wraper{
+	height: 402px;
+	/*border: 1px solid red;*/
+	margin-top: 67px;
+}
+.news,.comment{
+	height: 402px;
+	width: 345px;
+	/*border: 1px solid green;*/
+	padding-left: 0;
+	padding-right: 0;
+}
+.nes .panel,.comment .panel{
+	width: 346px;
+}
+.news .panel-heading,.comment .panel-heading{
+	height: 56px;
+	line-height: 56px;
+}
+.news .panel-heading span{
+	padding-left: 20px;
+	font-size: 21px;
+}
+.news .panel-heading a{
+	font-size: 12px;
+	margin-left: 203px;
+	color: #9a9a9a;
+}
+.news .panel-body li,.comment .panel-body li{
+	padding: 0 5px;
+	height: 75px;
+	border: none;
+	margin-top: 30px;
+	/*border: 1px solid yellow;*/
+}
+.news .panel-body li .item-img,.comment .panel-body li .item-img{
+	float: left;
+}
+.news .panel-body li .item-text,.comment .panel-body li .item-text{
+	float: right;
+	width: 174px;
+	/*margin-left: 18px;*/
+}
+.news .panel-body li .item-text h3,.comment .panel-body li .item-text h3{
+	font-size: 14px;
+	font-weight: bold;
+	margin-top: -9px;
+	margin-bottom: -12px;
+	/*border: 1px solid black;*/
+}
+.news .panel-body li .item-text p,.comment .panel-body li .item-text p{
+	font-size: 12px;
+	line-height: 24px;
+}
+.comment{
+	height: 402px;
+	width: 345px;
+	/*border: 1px solid black;*/
+	margin-left: 20px;
+	padding: 0;
+}
+/*财经资讯部分头部重写*/
+.comment .panel .panel-heading span{
+	/*border: 1px solid red;*/
+	text-align: center;
+	display: inline-block;
+	width: 172px;
+	font-size: 21px;
+}
+.comment .panel .panel-heading span:last-child{
+	margin-left: -6px;
+}
+.comment .panel .panel-heading span:first-child{
+	background-color: #ffffff;
+}
+/*交收信息部分*/
+.deal{
+	height: 402px;
+	width: 269px;
+	/*border: 1px solid blue;*/
+	margin-left: 18px;
+	padding: 0;
+}
+.deal .panel-heading span{
+	padding-left: 16px;
+	font-size: 21px;
+}
+.deal .panel-heading a{
+	display: inline-block;
+	margin-left: 136px;
+}
+.deal .panel-body li{
+	list-style: square;
+	line-height: 38px;
+}
+.deal .panel-body ul{
+	padding-left: 22px;
+	padding-top: 8px;
+}
+/*表格和预约部分*/
+.data-num{
+	height: 602px;
+	border: 1px solid transparent;
+	margin-top: 75px;
+	padding-top: 65px;
+	background-color: #f3f3f3;
+}
+.table-wraper{
+	/*border: 1px solid green;*/
+	padding-left: 0;
+	padding-right: 0;
+}
+.table tr{
+	height: 48px;
+	color: #666666;
+	font-size: 12px;
+}
+.table tr:first-child{
+	height: 57px;
+	font-size: 14px;
+	color: #898989;
+}
+.table tr:nth-last-of-type(2n){
+	background-color: #fff;
+}
+.table th,.table td{
+	width: 118px;
+}
+/*预约和二维码*/
+.user-qr{
+	padding-left: 0;
+	padding-right: 0;
+	width:280px ;
+	margin-left: 21px;
+}
+.user-num{
+	border: 1px solid transparent;
+	text-align: center;
+	border-bottom: 1px solid #848484;
+	background-color: #ffffff;
+}
+.user-num p{
+	margin-top: 0;
+	margin-bottom: 0;
+}
+.user-num p:first-child{
+	font-size: 40px;
+	color: red;
+	padding-top: 53px;	
+}
+.user-num p:nth-of-type(2){
+	font-size: 12px;
+	color: #848484;
+	margin-top: 20px;
+}
+.user-num button{
+	height: 42px;
+	width: 195px;
+	background-color: red;
+	color: white;
+	margin-top: 38px;
+	margin-bottom: 45px;
+}
+.qr-code{
+	height: 230px;
+	border: 1px solid transparent;
+	background-color: #ffffff;
+	position: relative;
+}
+.data-num .col-md-4 .qr-code p{
+	margin-top: 40px;
+	text-indent: 20px;
+	font-size: 12px;
+	color: #848484;
+}
+.qr-code img{
+	position: absolute;
+	top: 80px;
+	left: 26px;
+}
+.data-num .col-md-4 .qr-code div{
+	margin-left: 149px;
+	font-size: 12px;
+	margin-top: 30px;
+}
+.data-num .col-md-4 .qr-code div p{
+	text-indent: 0;
+	margin-top: 0;
+	line-height: 24px;
+}
+/*合作伙伴部分*/
+.partner{
+	border: 1px solid transparent;
+	height: 352px;
+}
+.partner p{
+	margin-top: 71px;
+	font-size: 16px;
+	color: #777;
+}
+.partner ul{
+	margin: 0 0 0 13px;
+	padding: 0;
+}
+.partner ul li{
+	list-style: none;
+	float: left;
+	width: 157px;
+	height: 44px;
+	margin-right: 82px;
+	margin-top: 49px;
+}
+.partner li img{
+	width: 100%;
+	height: 100%;
+}
+/*footer部分*/
+.footer{
+	height: 372px;
+	border: 1px solid transparent;
+	background-color: #f2f2f2;
+}
+.footer .col-md-8,.footer-nav .col-md-3,.footer .col-md-4{
+	padding-left: 0;
+	padding-right: 0;
+}
+.footer-nav .col-md-3{
+	margin-top: 50px;
+	/*border: 1px solid blue;*/
+	text-align: left;
+	width: 174px;
+}
+.footer-nav .col-md-3 p{
+	margin: 0 0 16px 0px;
+	font-size: 16px;
+	color: #4d4d4d;
+}
+.footer-nav ul{
+	margin: 0;
+	padding: 0;
+}
+.footer-nav li{
+	list-style: none;
+	line-height: 36px;
+}
+.footer-nav li a{
+	color: #808080;
+	font-size: 12px;
+}
+.footer .number{
+	margin-top: 50px;
+	/*border: 1px solid black;*/
+	padding-left: 67px;
+}
+.footer .number p{
+	margin: 0;
+	padding: 0;
+}
+.footer .number p:nth-of-type(1){
+	font-size: 16px;
+	color: #4d4d4d;
+	margin-bottom: 15px;
+}
+.footer .number p:nth-of-type(2){
+	font-size: 22px;
+	color: #b64c4c;
+	font-weight: bold;
+	margin-bottom: 14px;
+}
+.footer .number p:nth-of-type(3){
+	font-size: 12px;
+	color:#808080 ;
+	margin-bottom: 26px;
+}
+.footer .number a{
+	display: inline-block;
+	height: 65px;
+	width: 45px;
+	font-size: 12px;
+	/*border: 1px solid red;*/
+	padding-top: 52px;
+	text-align: center;
+	color:#808080;
+}
+.footer .number a:nth-of-type(1){
+	margin-right: 30px;
+	background: url(../img/icon-wechat.png) no-repeat;
+}
+.footer .number a:nth-of-type(2){
+	background: url(../img/icon-qq.png) no-repeat;
+}
+.footer-wraper{
+	height: 254px;
+	border-bottom: 1px solid #e6e6e6;
+}
+/*友情链接*/
+.footer .link p{
+	margin: 0;
+	/*padding: 0;*/
+}
+.footer .link{
+	text-align: center;
+	font-size: 12px;
+	color: #808080;
+	margin-top: 39px;
+}
+.footer .link a{
+	display: inline-block;
+	color:#808080 ;
+}
+.footer .link p:nth-of-type(2){
+	margin-top: 23px;
+}

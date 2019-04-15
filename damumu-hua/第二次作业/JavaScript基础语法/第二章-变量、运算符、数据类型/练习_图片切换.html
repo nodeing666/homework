@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/index.css">
+    <title>图片切换-基础部分</title>
+</head>
+<body>
+<div id="wrap">
+    <div class="title">
+        <div class="tit-con">
+            <span id="prev">上一张</span>
+            <span id="next">下一张</span>
+        </div>
+    </div>
+    <div class="container">
+        <img id="img" src="img/05.jpg" alt="">
+    </div>
+</div>
+<script type="text/javascript">
+var oPrev=document.getElementById("prev");
+var oNext=document.getElementById("next");
+var oImg=document.getElementById("img");
+var nowsImg=5;
+oPrev.onclick=function(){
+	nowsImg--;
+	if (nowsImg<=0) {
+		nowsImg=1;
+		alert("这是第一张图片了");
+	} 
+	oImg.src="img/0"+nowsImg+".jpg";
+}
+oNext.onclick=function(){
+	nowsImg++;
+	if (nowsImg>=5) {
+		nowsImg=5;
+		alert("这是最后一张图片了");
+	} 
+	oImg.src="img/0"+nowsImg+".jpg";
+}
+</script>
+</body>
+</html>

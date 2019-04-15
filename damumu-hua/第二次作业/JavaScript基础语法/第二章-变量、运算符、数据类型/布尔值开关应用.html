@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			body{
+				text-align: center;
+				margin-top: 100px;
+			}
+			#box{
+				height: 200px;
+				width: 200px;
+				margin: 50px auto;
+				background-color: green;
+			}
+		</style>
+	</head>
+	<body>
+		<button id="btn">开关</button>
+		<div id="box"></div>
+		<script type="text/javascript">
+			var oBtn=document.getElementById("btn");
+			var oBox=document.getElementById("box");
+			var flag=true;
+			oBtn.onclick=function(){
+				//flag默认值为true，点击开关后先取反再执行条件语句
+				flag=!flag;
+				if (flag==true) {
+					oBox.style.display="block";
+				} else{
+					oBox.style.display="none";
+				}
+//				flag=!flag;
+			}
+		</script>
+	</body>
+</html>

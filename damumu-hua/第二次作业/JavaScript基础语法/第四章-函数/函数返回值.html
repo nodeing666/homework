@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<div id="box"></div>
+		<script type="text/javascript">
+			//函数没有使用return 关键字的时候  默认返回 undefined
+			function add(a, b){
+				var result = a + b;
+				console.log(result)
+				return add;
+			}
+//			var res = add(10, 30)
+//			console.log("res:", res)
+		</script>
+		<script type="text/javascript">
+//			function add(a, b){
+//				var result = a + b;
+////				return result
+//				return function(){
+//					alert("我是匿名函数")
+//				}
+//				alert("1111")
+//			}
+////			add(10, 30)   函数执行过程中没有输出内容，把內返回了
+//			var res = add(10, 30)
+////			res()
+//			console.log("res:", res)
+			
+			// 获取到box..38节(有疑问)
+			var oBox = getId('box')
+			function getId(id){
+				return document.getElementById(id)
+			}
+			oBox.style.backgroundColor = "red"
+			console.log(oBox)
+		</script>
+	</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			// 数组的操作 增 删 查 改
+			var arr = [88, 99,10,96,56,44]
+			//查询某个元素  变量名[索引值]
+			console.log(arr[1])
+			//增加一个元素
+			arr[6] = 100
+			//在末尾增加
+			arr[arr.length] = 101
+			//多次在末尾增加
+			for(var i=0;i<100;i++){
+				arr[arr.length] = i
+			}
+			console.log(arr)
+			// 删除元素  删除后数组长度不会改变
+			var arr2 = [1,2,3,4]
+			delete arr2[1]
+			//数组的修改
+			var arr3 = [4,5,6,7]
+			arr3[2] = 100
+		</script>
+	</body>
+</html>

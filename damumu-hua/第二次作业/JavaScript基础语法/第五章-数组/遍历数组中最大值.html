@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			function max_value(arr){
+				var max=arr[0];
+				for (var i=1,len=arr.length;i<len;i++) {
+					if(arr[i]>max){
+						max=arr[i];
+					}
+				}
+				return max;
+			}
+			var result=max_value([10,20,30,40]);
+			document.write(result);
+		</script>
+	</body>
+</html>

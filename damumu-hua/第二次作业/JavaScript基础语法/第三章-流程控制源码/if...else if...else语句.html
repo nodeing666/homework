@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="css/bootstrap.css" />
+		<style type="text/css">
+			#ipt{
+				width: 100px;
+				margin-top: 100px;	
+			}
+			
+		</style>
+	</head>
+	<body>
+		<input id="ipt" type="text" class="form-control" />
+		<button id="btn" class="btn btn-danger">判断</button>
+		<script type="text/javascript">
+			//需求：判断分数等级
+			var oIpt = document.getElementById('ipt')
+			var oBtn = document.getElementById('btn')
+			oBtn.onclick = function(){
+				//60-69 及格 70-79 中等   80-89 良好  90-99 优秀
+				var num = oIpt.value
+				if(num>=90){
+					alert('优秀')
+				}else if(num >= 80){
+					alert("良好")
+				}else if(num >= 70){
+					alert("中等")
+				}else if(num >= 60){
+					alert("及格")
+				}else{
+					alert("不及格")
+				}
+			}
+		</script>
+		
+	</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<!--需求：输入一个三位数，点击按钮获取这个三位数的个数并赋给id为result的div中-->
+		<input type="text" id="Ipt" />
+		<button id="btn">点击</button>
+		<div id="result"></div>
+		<script type="text/javascript">
+			var oIpt=document.getElementById("Ipt");
+			var oBtn=document.getElementById("btn");
+			var oBox=document.getElementById("result");
+			oBtn.onclick=function(){
+				var num=Ipt.value;
+				var num2=num%100%10;
+				oBox.innerHTML=num2;
+			}
+		</script>
+	</body>
+</html>

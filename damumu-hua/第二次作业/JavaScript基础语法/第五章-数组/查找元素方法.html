@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<div id="box">
+			<button id="btn">添加内容</button>
+			<ul>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+			</ul>
+			<input type="checkbox" class="ipt" />
+			<input type="checkbox" class="ipt" />
+			<input type="checkbox" class="ipt" />
+			<input type="checkbox" class="ipt" />
+			<input type="checkbox" class="ipt" />
+		</div>
+		<script type="text/javascript">
+			//通过id来获取元素
+			var oBox = document.getElementById("box")
+			//通过标签名称来获取元素，为一个数组
+			var aLi = document.getElementsByTagName("li")
+			//通过类名称来获取元素，数组
+			var aIpt = document.getElementsByClassName("ipt")
+			console.log(aLi)
+			var oBtn = document.getElementById('btn')
+			//点击按钮 批量的给li添加内容
+			oBtn.onclick = function(){
+				for(var i in aLi){
+					aLi[i].innerHTML = i
+					aLi[i].style.color = "red"
+				}
+			}
+			console.log(aIpt)
+		</script>
+	</body>
+</html>

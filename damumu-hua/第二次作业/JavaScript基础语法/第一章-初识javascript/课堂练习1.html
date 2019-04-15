@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			body{
+				padding-top: 100px;
+				text-align: center;
+			}
+			#result{
+				text-align: center;
+				height: 100px;
+				width: 50%;
+				margin: 50px auto;
+				border: 1px solid black;
+			}
+		</style>
+	</head>
+	<body>
+		<!--需求：有两个输入框，分别输入数字，点击按钮后计算差，把结果传到id为result的div中-->
+			<input type="text" id="Ipt1" />
+			<input type="text" id="Ipt2"/>
+			<button id="btn">计算</button>
+			<div id="result"></div>
+			<script type="text/javascript">
+				var oIpt1=document.getElementById("Ipt1");
+				var oIpt2=document.getElementById("Ipt2");
+				var oBtn=document.getElementById("btn");
+				var oBox=document.getElementById("result");
+				oBtn.onclick=function(){
+					var num1=oIpt1.value;
+					var num2=oIpt2.value;
+					var result=num1-num2;
+					oBox.innerHTML=result;
+				}
+			</script>
+	</body>
+</html>

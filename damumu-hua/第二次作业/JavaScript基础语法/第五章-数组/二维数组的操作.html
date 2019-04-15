@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			//二维数组的操作 增 删 查 改
+			var group = [
+				[90,92,88],
+				[88, 22,44],
+				[36, 33,66]
+			]
+			//查
+			console.log(group[0][0])
+			console.log(group[2][2])
+			
+			//删
+			delete group[2][2]
+			console.log(group)
+			
+			//增
+			group[1][group[1].length] = 100
+			
+			//改
+			group[0][1] = 0
+			console.log(group)
+			//总结：只需要找到某个元素，就可以对其操作
+		</script>
+	</body>
+</html>

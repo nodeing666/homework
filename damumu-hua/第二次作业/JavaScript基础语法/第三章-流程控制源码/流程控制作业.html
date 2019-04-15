@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+//1、（分支结构）定义一个变量表示“分数” 并给其赋值，在页面中是根据分数高低不同输出如下文字：优秀（>=90），良好（>=80），中等（>=70），及格（>=60），不及格（其他情况）。——使用if和switch两种方法来实现。
+//   var score = prompt("请输入分数：");
+//   if (score>=90) {
+//   	alert("优秀");
+//   } else if(score>=80){
+//   	alert("良好");
+//   } else if(score>=70){
+//   	alert("中等");
+//   } else if(score>=60){
+//   	alert("及格");
+//   } else{
+//   	alert("不及格");
+//   }
+//   
+//   var score=prompt("请输入分数：");
+//   var num=parseInt(score/10);
+//   switch (num){
+//   	case 9:
+//   	document.write("优秀");
+//   		break;
+//   	case 8:
+//   	document.write("良好");
+//   		break;
+//   	case 7:
+//   	document.write("中等");
+//   		break;
+//   	case 6:
+//   	document.write("及格");
+//   		break;
+//   	default:
+//   	document.write("不及格");
+//   		break;
+//   }
+//2、（分支结构）根据一个人的存款的多少决定使用什么交通工具：如果我有10万元以上，就买小汽车上班或者如果我有5000元以上，
+//我就买摩托上班，或者如果我有300元以上，我就买自行车上班，或者如果我有20元以上，我就坐公交上班，否则，我就只好步行上班提示：
+//使用一个变量表示其存款数，对该变量进行判断以输出所采用的交通工具
+//	var num=prompt("请输入你的存款数：");
+//	if(num>100000){
+//		alert("买小汽车上班");
+//	}else if(num>5000){
+//		alert("买摩托车上班");
+//	}else if(num>300){
+//		alert("买自行车上班");
+//	}else if(num>20){
+//		alert("坐公交上班");
+//	}else{
+//		alert("步行上班");
+//	}
+
+//3、（循环）输出1-100之间能被3整除的数。
+//	for (var i=1;i<=100;i++) {
+//		if(i%3==0){
+//			document.write(i+"<br />");
+//		}
+//	}
+
+//4、（循环）计算1-1000之间能被3整除的偶数的个数。
+//		var count=0;
+//		for (var i=1;i<=100;i++) {
+//		if(i%3==0&&i%2==0){
+//			count++;
+//		}
+//	}
+//		document.write(count);
+
+//5、（循环）输出九九乘法表
+//	for (var i=1;i<=9;i++) {
+//		for (var j=1;j<=i;j++) {
+//			document.write(i+"*"+j+"="+i*j+"&nbsp;&nbsp");
+//		}
+//		document.write("<br />");
+//	}
+
+////6、（流程：分支与循环）输出从2000年（含）到3000年（含）间的所有闰年。提示：闰年：400的倍数 或者 是4的倍数不是100的倍数
+//	for (var i=2000;i<=3000;i++) {
+//		if(i%400==0){
+//			document.write(i+"<br />");
+//		}
+//	}
+
+//7、（循环，分析）一张纸的厚度是0.01毫米，则该纸对折30次后是多厚（据说超过珠穆朗玛峰的高度）。反过来，一张纸对折几次后，就
+//超过1米厚了？
+//	var paper=0.01;
+//	for (var count=1;count<=30;count++) {
+//		paper*=2;
+//	}
+//	document.write(paper);
+
+//	var count=0;
+//	for (var paper=0.01;paper<=1000;paper++) {
+//		paper*=2;
+//		count++
+//	}
+//	document.write(count);
+
+//8、（循环，简单逻辑）写一个程序输出1到100这些数字。但是遇到数字为3的倍数的时候，输出“三”替代数字，为5的倍数用“五”代替，既
+//是3的倍数又是5的倍数则输出“三五”。
+//	for (var i=1;i<=100;i++) {
+//		if(i%3==0 && i%5==0){       //为什么用除法报错
+//			document.write("三五"+"<br />");
+//		}
+//		 else if(i%3==0){
+//			document.write("三"+"<br />");
+//		}
+//		 else if(i%5==0){
+//			document.write("五"+"<br />");
+//		}
+//		 else{
+//			document.write(i+"<br />");
+//		}
+//	}
+
+//9、求解1-100 能被3和5同时整除的数字的和
+//	var sum=0;
+//	for (var i=1;i<=100;i++) {
+//		if(i%3==0&&i%5==0){
+//			sum += i;
+//		}
+//	}
+//	document.write(sum);
+
+//10、求1-3+5-7+…-99+101(问题)
+//	var sum=0;
+//	for (var i=1,j=1;i<=101;i=i+2) {
+//		sum+=i*j;
+//		j=j*(-j);
+//	}
+//	document.write(sum);
+		</script>
+	</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<input type="button" value="-" id="btn1" />
+		<input type="text"  value="1" id="num"/>
+		<input type="button" value="+" id="btn2"/>
+		<script type="text/javascript">
+			var oBtn1=document.getElementById("btn1");
+			var oNum=document.getElementById("num");
+			var oBtn2=document.getElementById("btn2");
+			oBtn1.onclick=function(){
+				var num=oNum.value
+				num--;
+				if (num==0) {
+					oNum.value=1;
+				} else{
+					oNum.value=num;
+				}
+			}
+			oBtn2.onclick=function(){
+				var num=oNum.value
+				num++;
+				oNum.value=num;
+			}
+		</script>
+	</body>
+</html>

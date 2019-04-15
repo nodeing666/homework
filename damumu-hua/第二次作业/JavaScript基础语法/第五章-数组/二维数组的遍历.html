@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			var group = [
+				[90,92,88],
+				[881, 22,44],
+				[36, 33,66]
+			]
+//			for(var i=0, len = group.length;i<len;i++){
+//				for(var j=0, len = group[i]; j < len;j++){
+//					console.log(group[i][j])
+//				}
+//			}
+			//二维数组的遍历 其实就是两次循环嵌套
+			for(var i in group){
+				var arr = group[i]
+				for(var j in arr){
+					console.log(arr[j])
+				}
+			}
+		</script>
+	</body>
+</html>

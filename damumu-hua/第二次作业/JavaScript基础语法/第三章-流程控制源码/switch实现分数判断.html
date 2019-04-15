@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.css"/>
+		<style type="text/css">
+			#ipt{
+				width: 100px!important;
+				margin-top: 100px;	
+			}
+		</style>
+	</head>
+	<body>
+		<input id="ipt" type="text" class="form-control" />
+		<button id="btn" class="btn btn-danger">判断</button>
+		<script type="text/javascript">
+			//实现分数判断 60-69 70-79 80-89 90-99 
+			var oIpt = document.getElementById('ipt')
+			var oBtn = document.getElementById('btn')
+			oBtn.onclick = function(){
+				var num= oIpt.value
+//				var num2 = parseInt(num / 10 )
+//				switch(num2){
+//					case 6:
+//						alert("及格")
+//						break
+//					case 7:
+//						alert("中等")
+//						break
+//					case 8:
+//						alert("良好")
+//						break
+//					case 9:
+//						alert("优秀")
+//						break
+//					default:
+//						alert("不及格或者输入错误")
+//				}
+
+//				方案二
+//				switch(true){
+//					case num >= 60 && num <69:
+//						alert("及格")
+//						break
+//					case num >= 70 && num <79:
+//						alert("中等")
+//						break
+//					case num >= 80 && num <89:
+//						alert("良好")
+//						break
+//					case num >= 90 && num <=99:
+//						alert("优秀")
+//						break
+//					default:
+//						alert("不及格或者输入错误")
+//				}
+//				总结：switch 和 if 都可以实现分支，通常的应用场景如果有范围、条件
+//				用if,如果是具体的某个值,用switch
+			}
+		</script>
+	</body>
+</html>

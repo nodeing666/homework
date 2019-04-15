@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			//一张纸的厚度是0.01毫米，对折多少次后能超过1米？
+			var paper = 0.01
+			var count = 0
+			while(paper < 1000){
+				paper = paper * 2  
+				count++
+			}
+			console.log(count)
+//			for和while的使用场景：
+//			当知道循环的次数,可以用for 也可以while循环,推荐用for
+//			当不知道循环次数,但是知道什么时候结束,推荐while循环
+		</script>
+	</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<div id="box">螺钉课堂</div>
+		<button id="btn">点击我</button>
+		<script type="text/javascript">
+			var oBox=document.getElementById("box");
+			var oBtn=document.getElementById("btn");
+		/*function fun(){
+				oBox.innerHTML="螺钉课堂：nodeing.com"
+			}
+			oBtn.onclick=fun;*/
+			oBtn.onclick=function (){
+				//匿名函数
+				oBox.innerHTML="螺钉课堂：nodeing.com"
+			}
+		</script>
+	</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			var  arr = [98,34,45,67,34,23,68];
+//			for(var i=0, len = arr.length;i<len;i++){
+//				console.log(arr[i])
+//			}
+
+			// for in 语句来遍历数组, 可以遍历对象
+			for(var i in arr){
+				//for in里面的i 类型是字符串类型 做加法的时候要注意
+				console.log(typeof i)
+				console.log(arr[i])
+			}
+			//总结：for循环和for in都可以遍历数组，for in相对简单
+		</script>
+	</body>
+</html>

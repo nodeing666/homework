@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			body{
+				text-align: center;
+				padding-top: 100px;
+			}
+			#p1{
+				font-size: 14px;
+				height: 100px;
+				width: 50%;
+				margin: 50px auto;
+				border: 1px solid black;
+			}
+		</style>
+	</head>
+	<body>
+		<!--需求：点击+号，使id为p1的内放大五个像素，点击—号，使id为p1的内容减小3个像素-->
+		<button id="btn1">+</button>
+		<button id="btn2">-</button>
+		<p id="p1">螺钉课堂：nodeing.com</p>
+		<script type="text/javascript">
+			var oBtn1=document.getElementById("btn1");
+			var oBtn2=document.getElementById("btn2");
+			var oP1=document.getElementById("p1");
+			var fontSize=14
+			oBtn1.onclick=function(){
+				fontSize=fontSize+5;
+				oP1.style.fontSize=fontSize+"px";
+			}
+			oBtn2.onclick=function(){
+				fontSize=fontSize-3;
+				oP1.style.fontSize=fontSize+"px";
+			}
+		</script>
+	</body>
+</html>

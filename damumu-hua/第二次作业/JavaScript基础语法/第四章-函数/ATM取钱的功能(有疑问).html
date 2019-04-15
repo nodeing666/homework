@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="css/bootstrap.css" />
+		<style type="text/css">
+			#wrap{
+				width: 400px;
+				margin-top: 100px;
+			}
+		</style>
+	</head>
+	<body>
+	<!--需求：3、设计一个ATM取钱的功能，输入帐号 和 密码 还有取多少钱   直接输出-->
+		<div class="container form-horizontal" id="wrap">
+			<!--QQ号-->
+			<div class="form-group">
+				<div class="col-md-3">
+					<label for="" class="control-label">账号:</label>
+				</div>
+				<div class="col-md-9">
+					<input id="usernum" type="text" class="form-control"/>
+				</div>
+			</div>
+			<!--密码-->
+			<div class="form-group">
+				<div class="col-md-3">
+					<label for="" class="control-label">密码:</label>
+				</div>
+				<div class="col-md-9">
+					<input id="password" type="password" class="form-control"/>
+				</div>
+			</div>
+			<!--取款金额-->
+			<div class="form-group">
+				<div class="col-md-3">
+					<label for="" class="control-label">金额(元):</label>
+				</div>
+				<div class="col-md-9">
+					<input id="money" type="text" class="form-control"/>
+				</div>
+			</div>
+			<!--登录按钮-->
+			<div class="form-grop">
+				<button id="btn" class="btn btn-danger col-md-offset-4">登录</button>
+			</div>
+		</div>
+		<script type="text/javascript">
+			//1判断格式
+//				账号的长度: 16-19位 
+//				账号必须是数字
+//				密码: 6位数
+			//2 判断账名和密码是否正确
+				//正确的账名和密码是多少？假设： 1234567890123456 && 123456
+			//3 流程：a.用户点击登录按钮 b. 开始判断--拿用户输入的和正确的比对  c. 判断的结果返回给用户
+			var oBtn=document.getElementById("btn")
+			var oUsernum=document.getElementById("usernum")
+			var oPassword=document.getElementById("password")
+			var oMoney=document.getElementById("money")
+			//定义正确的账号和密码
+			var usernum=1234567890123456
+			var password=123456
+			//给登陆按钮绑定事件
+			oBtn.onclick=function(){
+				//获取账号密码
+				var Ipt_usernum=oUsernum.value
+				var Ipt_password=oPassword.value
+				var Ipt_money=oMoney.value
+				//判断账号格式--------------------
+				if(Ipt_usernum.length<16||Ipt_usernum.length>19){
+					alert("账号长度不对");
+					return;
+				}
+				//判断是否为纯数字
+				var res1=Number(Ipt_usernum);
+				if(isNaN(res1)){
+					alert("账号只能是数字组成");
+					return;
+				}
+				//判断密码格式---------------------
+				if(Ipt_password.length==!6){
+					alert("密码长度不对");
+					return;
+				}
+				//判断密码是否为纯数字
+				var res2=Number(Ipt_password);
+				if(isNaN(res2)){
+					alert("密码只能是数字组成");
+					return;
+				}
+				//判断金额格式---------------------
+//				var num5=parseInt(Ipt_money);
+				if(Ipt_money%100==!0){
+					alert("金额只能为100的倍数");
+					return;
+				}
+				//判断金额是否为纯数字
+				var res3=Number(Ipt_money);
+				if(isNaN(res3)){
+					alert("金额只能是数字组成");
+					return;
+				}
+//				验证账号和密码
+				if(Ipt_usernum==usernum&&Ipt_password==password){
+					alert("验证成功");
+				}else{
+					alert("验证失败");
+				}
+			}
+		</script>
+	</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.css"/>
+		<title></title>
+		<style type="text/css">
+			#wrap{
+				width: 300px;
+				margin: 50px auto;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="wrap">
+			<button id="btn1" class="btn-primary">全选</button>
+			<button id="btn2" class=" btn-danger">反选</button>
+			<br />
+			<br />
+			<input type="checkbox" />
+			<input type="checkbox" />
+			<input type="checkbox" />
+			<input type="checkbox" />
+			<input type="checkbox" />
+			<input type="checkbox" />
+			<input type="checkbox" />
+			<input type="checkbox" />
+			<input type="checkbox" />
+			<input type="checkbox" />
+		</div>
+		<script type="text/javascript">
+			var aInput=document.getElementsByTagName("input");
+			var oBtn1=document.getElementById("btn1");
+			var oBtn2=document.getElementById("btn2");
+			oBtn1.onclick=function(){
+				for(var i=0;i<10;i++){
+					aInput[i].checked=true;
+				}
+			}
+			oBtn2.onclick=function(){
+				for(var i=0;i<10;i++){
+					aInput[i].checked=false;
+				}
+			}
+		</script>
+	</body>
+</html>

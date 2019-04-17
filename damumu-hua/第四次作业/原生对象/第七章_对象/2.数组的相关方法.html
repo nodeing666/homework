@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			var arr=[1,2,3] //var arr=new Array[1,2,3]
+			console.log(arr.length)
+			//1.concat,用来连接两个数组
+			var arr2=[4,5,6]
+			var arr3=arr.concat(arr2)
+			console.log(arr3)
+			//2.join，根据指定符号，把数组元素组成一个字符串
+			var str=arr2.join("--")
+			//3.pop,删除数组的最后一个元素
+			var str2=arr1.pop()
+			//4 push 在数组的末尾添加一个元素
+			var arr5 = [1,2,3]
+			arr5.push(222)
+			console.log(arr5)
+			//5 reverse  反转数组 [1,2,3] ---reverse --- [3,2,1]
+			var arr6 = [1,2,3]
+			arr6.reverse()
+			console.log(arr6)
+			
+			//6 splice  添加或者删除元素，具有两个功能，取决于参数
+			var arr7 =["香蕉","苹果","桃子","栗子"]
+			//splice 第一个参数表示位置（添加或者删除的位置），
+//			如果添加从第一个参数设置的位置开始添加，
+//			如果删除也是从第一个参数设置的位置开始删除
+			//第二个参数，表示删除多少个元素，如果不想删除就直接写0，
+			//从第三个参数开始都是添加的内容
+			//注意：如果只有一个参数，表示从当前设置的位置删除到末尾
+//			var v = arr7.splice(1,0,"葡萄","橘子")
+			var v = arr7.splice(1)
+			console.log("删除后的返回值：",v)
+			console.log("arr7:",arr7)
+		</script>
+	</body>
+</html>

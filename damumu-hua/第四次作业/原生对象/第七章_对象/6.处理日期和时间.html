@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			//创建日期时间
+			var date1=new Date()
+			console.log(date1)
+			//创建指定日期
+			var date2=new Date("2018/4/12")
+			console.log(date2)
+			//创建指定日期时间
+			var date3=new Date("2018/4/12 20:34:34")
+			console.log(date3)
+			//创建指定的时间，传入数字
+			var date4=new Date(2018,3,12,20,34,34)
+			console.log(date4)
+			
+//			方法
+//			1.获取年份
+			console.log(date1.getFullYear())
+//			2.获取月份
+			console.log(date1.getMonth())
+//			3.获取日
+			console.log(date1.getDate())
+//			4.获取时分秒
+			console.log(date1.getHours())
+			console.log(date1.getMinutes())
+			console.log(date1.getSeconds())
+//			5.获取时间戳
+			console.log(date1.getTime())
+		</script>
+	</body>
+</html>

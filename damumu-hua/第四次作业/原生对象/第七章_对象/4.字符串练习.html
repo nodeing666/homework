@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+<div id="wrap">
+    <div class="title">
+        商品图片上传类型判断
+    </div>
+    <div class="content">
+        <img src="img/02.jpg" alt="">
+    </div>
+    <div class="footer">
+        <div>选择商品图片</div>
+        <input type="file" id="btn">
+    </div>
+</div>
+<script type="text/javascript">
+	//需求：点击选择商品图片上传图片
+//	思路:1.得到文件路径
+//		2.验证文件后缀名是否符合上传要求
+		var oFile=document.getElementById("btn")
+		oFile.onchange=function(){
+			//获取路径
+			var oFilevalue=oFile.value
+			//或var fileValue = this.value
+			//从后往前截取字符串
+			var fileType=oFilevalue.substr(oFilevalue.lastIndexOf("."))
+			//3.验证
+			var res=checkType(fileType)
+			if (res) {
+				alert("可以上传")
+			} else{
+				alert("该格式不允许上传")
+			}
+		}
+		function checkType(fileType){
+			var allType=[".jpg",".png",".gif"]
+			for (var i in allType) {
+				if (allType[i]==fileType) {
+					return true;
+				} 
+			}
+			return false;
+		}
+</script>
+</body>
+</html>

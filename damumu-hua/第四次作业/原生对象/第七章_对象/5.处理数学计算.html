@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			//Math属性 PI
+			console.log(Math.PI)
+			//1.Math方法：取绝对值
+			console.log(Math.abs(-1))
+			//2.向上取整
+			console.log(Math.ceil(14.3))
+			//3.向下取整
+			console.log(Math.floor(14.2))
+			//4.取最大值
+			console.log(Math.max(1,2,3,4,5))
+			//5.取最小值
+			console.log(Math.min(1,2,3,4,5))
+			//6.取X的Y次方
+			console.log(Math.pow(2,3))
+			//7.四舍五入
+			console.log(Math.round(12.3))
+			//8.random求0～1的随机数，包含0不包含1
+			for (var i=0;i<30;i++) {
+//				console.log(Math.random())
+				console.log(Math.floor(Math.random()*(30-10+1)+10))
+			}
+			//需求：设计生成m～n的随机数，例如10～30
+			//思路：要求10～30随机数，先求0～30随机数
+			function getRondomInt(min,max){
+				console.log(Math.floor(Math.random()*(max-min+1)+min))
+			}
+		</script>
+	</body>
+</html>

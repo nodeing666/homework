@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<button>点击	</button>
+		<script type="text/javascript">
+			//获取到的是一个集合
+			var oButton=document.getElementsByTagName("button")
+			//鼠标单击事件
+			oButton[0].onclick=function(){
+				alert("鼠标单击");
+			}
+			//鼠标双击事件
+			oButton[0].ondblclick=function(){
+				alert("鼠标双击了");
+			}
+			//鼠标移动事件,document表示整个html文档
+			document.onmousemove=function(){
+				console.log("鼠标移动");
+			}
+			//鼠标右键菜单事件
+			document.oncontextmenu=function(){
+				alert("右键菜单");
+				//阻止原来的菜单弹出
+				return false;
+			}
+			
+		</script>
+	</body>
+</html>

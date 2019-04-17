@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#box{
+				height: 100px;
+				width: 100px;
+				background-color: red;
+				position: absolute;
+				top: 0px;
+				left: 0px;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="box"></div>
+		<script type="text/javascript">
+			var oBox=document.getElementById("box")
+			var X=0
+			var Y=0
+			document.onkeyup=function(ev){
+				var ev=ev||event
+				//w+:87 s-:83 a-:65 d+:68
+//				console.log(ev.keyCode)
+				switch(ev.keyCode){
+					case 87:
+						Y+=10
+					break;
+					case 83:
+						Y-=10
+					break;
+					case 65:
+						X-=10
+					break;
+					case 68:
+						X+=10
+					break;
+				}
+//				console.log(X,Y,ev.keyCode)
+				oBox.style.top=Y+"px";
+				oBox.style.left=X+"px";
+			}
+		</script>
+	</body>
+</html>

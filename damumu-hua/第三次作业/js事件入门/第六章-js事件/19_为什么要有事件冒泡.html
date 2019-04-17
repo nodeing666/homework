@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		 <!--事件冒泡是默认支持的机制，为什么要用到事件冒泡？-->
+	     <!--事件源-->
+	     <!--创建元素-->
+		<input type="text" id="ipt" /><button id="btn">添加</button>
+		<ul>
+			<li>ssss</li>
+			<li>sdds</li>
+			<li>sddd</li>
+		</ul>
+		<script type="text/javascript">
+			var oIpt=document.getElementById("ipt")
+			var oBtn=document.getElementById("btn")
+			var oUl=document.getElementsByTagName("ul")[0]
+			oBtn.onclick=function(){
+				var Iptvalue=oIpt.value
+				//创建一个li
+				var oLi=document.createElement("li")
+				//给oLi添加内容
+				oLi.innerHTML=Iptvalue
+				//把li元素放到ul里面
+				oUl.appendChild(oLi)
+			}
+			//需求：当点击li时使字体变红
+			var aLi=document.getElementsByTagName("li")
+//			给所有的li批量的绑定事件
+//	     	for(var i=0;i<aLi.length;i++){
+//	     		//循环先执行，只绑定了3个
+//	     		aLi[i].onclick = function(){
+//	     			//this 指向当前点击的li
+//	     			this.style.color = "red"
+//	     		}
+//	     	}
+			//带来的问题：新添加的li无法变色，原因使循环先执行，指执行了原先的li，解决办法：用冒泡机制给ul绑定事件
+			oUl.onclick=function(ev){
+				//让它改变li的字体颜色，给哪个li设置，点击哪个li就设置那个li
+				//点击的是哪个li，那么事件源就是它
+//				alert(ev.target.innerHTML)
+//				ev.target 就是被点击的那个li
+				ev.target.style.color="red"
+				//事件委托： 原来发生在li身上的事情，让它的父亲来做
+			}
+		</script>
+	</body>
+</html>

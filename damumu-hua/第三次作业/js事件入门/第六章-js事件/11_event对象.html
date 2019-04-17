@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+//			alert(event)  //undefined
+			window.onload = function(evt){
+//				alert(event) //object event
+//				console.log(event)
+				//原理：逻辑运算符短路
+				// 如果evt存在（标准，ie高版本、chrome、firefox），那么就把evt（true）赋值给ev  ev = evt，不会执行event
+				// 如果evt不存在（ie8 以下），evt（undefined）赋值给ev， ev = event 
+				var ev = evt || event
+				alert(ev)
+			}
+			//注意：   1 必须要在事件发生的时候才有值，否则就是undefined
+			// 兼容性问题
+			//         1 在ie低版本（ie8）下和chrome下 event对象是内置的，直接使用event就可以了，
+			//         在firefox下不支持
+			//         2 在firefox和chrome下 事件对象是事件处理函数的第一个参数，在ie低版本下不支持
+		</script>
+	</body>
+</html>

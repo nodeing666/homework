@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<div id="box1">首页</div>
+		<div id="box2">实战</div>
+		<script type="text/javascript">
+			var oBox1=document.getElementById("box1")
+			var oBox2=document.getElementById("box2")
+			oBox1.onclick=function(ev){
+				//事件源：事件发生在谁身上，通过ev上的属性就可以得到
+				var ev=ev||event
+				//在标准下，事件源就是target
+				//在ie(6-8)下，是srcElement
+				var target=ev.target||ev.srcElement
+			}
+		</script>
+	</body>
+</html>

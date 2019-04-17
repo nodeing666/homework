@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<button id="btn1">按钮</button>
+		<button id="btn2">按钮</button>
+		<script type="text/javascript">
+			var oBtn1=document.getElementById("btn1")
+			var oBtn2=document.getElementById("btn2")
+			//事件发生了，也绑定了相关处理函数
+			oBtn1.onclick=function(){
+				alert("1");
+			}
+			//事件发生了，没有对于处理函数处理，但不影响程序
+			oBtn2.onclick=null;
+		</script>
+	</body>
+</html>

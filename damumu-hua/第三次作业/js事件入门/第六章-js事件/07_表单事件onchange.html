@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<form action="">
+			商品价格：<span id="span">198</span>
+			商品数量：<input type="text" id="Ipt1" value="1"/>
+			总价：<input type="text" id="Ipt2" value="198"/>
+			<script type="text/javascript">
+				var oIpt1=document.getElementById("Ipt1")
+				var oIpt2=document.getElementById("Ipt2")
+				var oSpan=document.getElementById("span")
+				oIpt1.onchange=function(){
+					var price=oSpan.innerHTML
+					//可以用this.value代替oIpt1.value
+					oIpt2.value=price*oIpt1.value
+				}
+			</script>
+		</form>
+	</body>
+</html>

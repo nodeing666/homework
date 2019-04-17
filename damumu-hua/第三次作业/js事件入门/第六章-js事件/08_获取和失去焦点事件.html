@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<form action="http://www.baidu.com/s" id="fm">
+			<!--提交后浏览器会将name为wd的value传到action中直接搜索-->
+			<input type="text" id="ipt" value="请输入搜索内容" name="wd"/>
+		</form>
+		<script type="text/javascript">
+			var oIpt=document.getElementById("ipt")
+			var oFm=document.getElementById("fm")
+			//获取焦点，清空内容
+			oIpt.onfocus=function(){
+				//问题：输入内容后，失去焦点，再获取焦点时内容会消失
+				if(oIpt.value=="请输入搜索内容"){
+					oIpt.value="";
+				}
+			}
+			//失去焦点，恢复默认value值
+			oIpt.onblur=function(){
+				if(oIpt.value==""){
+					oIpt.value="请输入搜索内容";
+				}
+			}
+			//当用户没输入内容时不能提交
+			oFm.onsubmit=function(){
+				if(oIpt.value==""){
+					alert("不能提交空内容");
+					return false;
+				}
+				return true;
+			}
+		</script>
+	</body>
+</html>

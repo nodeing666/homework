@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			document.onkeydown=function(){
+				console.log("键盘按下了");
+//				alert("键盘按下了");//会阻塞代码执行
+			}
+			document.onkeyup=function(ev){
+				console.log("键盘抬起了");
+				//event表示事件对象，当事件发生时用来记录相对应的对象
+				//keycode记录了当前按下的是哪个键，其实就是键盘码
+				console.log(ev.keyCode);
+				//13表示按的是回车键（应用于在搜索框内输入完内容直接点回车跳转）
+				if(ev.keyCode==13){
+					alert("被搜索了");
+				}
+			}
+		</script>
+	</body>
+</html>

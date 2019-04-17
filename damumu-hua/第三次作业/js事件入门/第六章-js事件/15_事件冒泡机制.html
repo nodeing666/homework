@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#box1{
+				height: 400px;
+				width: 400px;
+				background-color: red;
+				margin: 0 auto;
+			}
+			#box2{
+				height: 200px;
+				width: 200px;
+				background-color: blue;
+				margin: 100px auto;
+			}
+			#box3{
+				height: 100px;
+				width: 100px;
+				background-color: green;
+				margin: 50px auto;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="box1">
+			box1
+			<div id="box2">
+				box2
+				<div id="box3">
+					box3
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript">
+			var oBox1=document.getElementById("box1")
+			var oBox2=document.getElementById("box2")
+			var oBox3=document.getElementById("box3")
+			function fn(){
+				//this在函数内部，指向调用它的那个对象，通常如果函数前面没有对象调用，基本上都指向window
+				alert(this.id)
+			}
+			oBox1.onclick=fn
+			oBox2.onclick=fn
+			oBox3.onclick=fn
+			//点击box3时，box3的onclick会向box2的onclick传播，box2的onclick再向box1的onclick传播
+			//这种现象叫做事件冒泡，事件会从里面向外传播
+		</script>
+	</body>
+</html>

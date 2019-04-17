@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			a{
+				text-decoration: none;
+				height: 100px;
+				width: 100px;
+				padding-left: 20px;
+				color: black;
+			}
+		</style>
+	</head>
+	<body>
+		<a href="">螺钉课堂</a>
+		<a href="">实战</a>
+		<a href="">练习</a>
+		<a href="">说明</a>
+		<script type="text/javascript">
+			var oA=document.getElementsByTagName("a")
+			//批量绑定事件，遍历oA[]这个集合，再绑定函数
+			for (var i in oA) {
+				oA[i].onmouseover=function(){
+					//鼠标移动到哪个上面this指的就是哪个
+					this.style.backgroundColor="red"
+					this.style.color="white"
+				}
+				oA[i].onmouseout=function(){
+					this.style.backgroundColor="white"
+					this.style.color="black"
+				}
+			}
+		</script>
+	</body>
+</html>

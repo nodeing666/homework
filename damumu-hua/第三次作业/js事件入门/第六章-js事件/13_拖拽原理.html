@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#box{
+				height: 200px;
+				width: 200px;
+				background-color: orange;
+				position: absolute;
+				left: 0px;
+				top: 0px;
+			}
+		</style>
+	</head>
+	<body>
+		<!--需求：拖拽窗口移动-->
+		<div id="box"></div>
+		<script type="text/javascript">
+			//基本思想：拖拽窗口移动也就是改变窗口的top和left值
+			//条件：需要获取到top和left值，用offsetTop和offsetLeft
+			var oBox=document.getElementById("box")
+			//1.鼠标按下(已知oBox.offsetTop/oBox.offsetLeft/ev.clientX/ev.clientY求：difX/difY) 
+//			2.鼠标移动(已知difX/difY/ev.clientX/ev.clientY	求：oBox.offsetTop/oBox.offstLeft，
+//			  ，最后赋值给oBox.style.left和oBox.style.top)
+//			3.鼠标抬起(清空鼠标按下事件绑定的函数)
+			oBox.onmousedown=function(ev){
+				var ev=ev || event
+				var difX=ev.clientX-oBox.offsetLeft
+				var difY=ev.clientY-oBox.offsetTop
+				document.onmousemove=function(ev){
+					var ev=ev || event
+					var oBox_top=ev.clientY-difY;
+					var oBox_left=ev.clientX-difX;
+					oBox.style.left=oBox_left +"px";
+					oBox.style.top=oBox_top +"px";
+				}
+				document.onmouseup=function(){
+					document.onmousemove=null;
+				}
+			}
+		</script>
+	</body>
+</html>

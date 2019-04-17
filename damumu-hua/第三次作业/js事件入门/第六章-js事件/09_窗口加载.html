@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			//window表示最顶层的对象，onload表示当对象加载完成后触发。如果js放在上面则一定需要这么写，不然逐行编译会null
+			//表示让程序都加载完成后再执行函数内部代码
+			window.onload=function(){
+				var oBox=document.getElementById("box")
+				console.log(oBox)
+				alert(oBox.innerHTML)
+			}
+		</script>
+	</head>
+	<body>
+		<div id="box">
+			box1
+		</div>
+	</body>
+</html>

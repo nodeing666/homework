@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			function fn(){
+				document.write("hello world!"+"<br />")
+			}
+			//重复调用执行一段代码块，有时间间隔，与循环的区别是循环是一瞬间执行完的
+			setInterval(fn,1000)
+			for (var i=0;i<50;i++) {
+				document.write("hello world!"+"<br />")
+			}
+		</script>
+	</body>
+</html>

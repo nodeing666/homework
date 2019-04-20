@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#box{
+				width: 100px;
+				height: 100px;
+				background-color: red;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="box" style="font-size: 20px;width: 200px;"></div>
+		<script type="text/javascript">
+			var oBox=document.getElementById("box")
+//			alert(oBox.id)
+			//这种写法只能用于行内样式
+//			alert(oBox.style.width)
+			//获取计算后的样式
+			alert(getComputedStyle(oBox).width)
+			//当为非标准浏览器下时：ie6/7/8下用
+			alert(oBox.currentStyle.width)
+			//处理兼容性
+			function getStyle(obj,attr){
+				if(window.getComputedStyle){
+					//如果属性名时一个变量，要把.换成[]
+					return window.getComputedStyle(obj)[attr]
+				}else{
+					return obj.currentStyle[attr]
+				}
+				return window.getComputedStyle?window.getComputedStyle(obj)[attr]:obj.currentStyle[attr]
+			}
+			
+		</script>
+	</body>
+</html>

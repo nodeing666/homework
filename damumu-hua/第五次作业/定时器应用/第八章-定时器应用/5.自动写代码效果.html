@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css" id="style-app">
+			
+		</style>
+	</head>
+	<body>
+	 <div id="content">
+            <div id="style-text">
+            	
+            </div>
+            <div id="tooltips" style="display:none">
+                    <div id="info">
+                        <div class="title">信息</div>
+                        <div class="content">恭喜你，中奖了</div>
+                        <div class="btn">
+                            <button id="confirm">确定</button>
+                        </div>
+                    </div>
+            </div>
+    </div>
+    <script type="text/javascript">
+		var style_text = `
+		    	#style-text{
+		        width: 300px;
+		        height: 460px;
+		        border: 5px solid white;
+		        background-color: green; 
+		        color: white;
+		
+		    }
+		    #tooltips{
+		        width: 100%;
+		        height: 100%;
+		        background-color: rgba(0,0,0,0.5);
+		        position: absolute;
+		        top: 0;
+		        z-index: 999;
+		        display: block!important;
+		    }
+		    #info{
+		        width: 400px;
+		        height: 200px;
+		        background-color: white;
+		        margin: 150px auto;
+		    }
+		    #info .title{
+		        width: 100%;
+		        height: 40px;
+		        background-color: #009f95;
+		        line-height: 40px;
+		        color: white;
+		        padding-left: 20px;
+		        box-sizing: border-box;
+		    }
+		    #info .btn button{
+		        background-color: #009f95;
+		        color: white;
+		        outline: none;
+		        font-size: 10px;
+		        width:60px;
+		        height: 30px;
+		        margin-left: 300px;
+		    }
+		    #info .content {
+		        height: 120px;
+		        padding: 20px;
+		        box-sizing: border-box;
+		    }
+    		`
+		var styleapp=document.getElementById("style-app")
+		var styletext=document.getElementById("style-text")
+		var timer=0
+		var n=1
+		timer=setInterval(function(){
+			styleapp.innerHTML=style_text.substring(0,n)
+			styletext.innerHTML=style_text.substring(0,n)
+			n++
+			if (n===style_text.length) {
+				clearInterval(timer)
+				alert("代码书写完成");
+			}
+		},10)
+//		if (n===style_text.length) {
+//			clearInterval(timer)
+//			alert("代码书写完成");
+//		}
+    </script>
+	</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<button id="start">开始</button>
+		<button id="stop">结束</button>
+		<div id="box"></div>
+		<script type="text/javascript">
+			var oStart=document.getElementById("start")
+			var oStop=document.getElementById("stop")
+			var oBox=document.getElementById("box")
+			var timer=null
+			oStart.onclick=getTime
+			function getTime(){
+				var date=new Date()
+				oBox.innerHTML=date.toLocaleString()
+				timer=setTimeout(getTime,1000)
+			}
+			oStop.onclick=function(){
+				clearTimeout(timer)
+			}
+		</script>
+	</body>
+</html>

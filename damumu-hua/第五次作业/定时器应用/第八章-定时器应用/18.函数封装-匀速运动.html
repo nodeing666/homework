@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#box {
+				width: 100px;
+				height: 100px;
+				background-color: #009F95;
+				position: absolute;
+				left: 100px;
+				top:100px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div id="box"></div>
+		<button id="start">开始</button>
+		<script type="text/javascript">
+			var oBox=document.getElementById("box")
+			var oStart=document.getElementById("start")
+//			var timer=null   //定义的是全局变量，为了封装函数，需在oBox上定义timer
+//			oBox.timer=null  
+			oStart.onclick=function(){
+				move(oBox,10,300,"left",200)
+			}
+			function move(obj,step,target,direction,speed){
+				var speed=speed||100
+				clearInterval(obj.time)  //第一次清除的是undefined
+				obj.timer=setInterval(function(){
+					var attrValue=parseInt(getStyle(obj,direction))+step  //步长
+					if (step>0) {
+						if (attrValue>target) {
+						attrValue=target
+						}
+					}
+					if (step<0) {
+						if (attrValue<target) {
+						attrValue=target
+						}
+					}
+					obj.style[direction]=attrValue+"px"
+					if(attrValue==target){
+						clearInterval(obj.time)
+					}
+				},speed)
+			}
+			function getStyle(obj,attr){
+				return window.getComputedStyle?window.getComputedStyle(obj)[attr]:obj.currentStyle[attr]
+			}
+		</script>
+	</body>
+
+</html>

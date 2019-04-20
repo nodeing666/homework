@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#box{
+				height: 100px;
+				width: 100px;
+				margin: 100px,auto;
+				background-color: orange;
+				position: absolute;
+				top: 200px;
+				left: 400px;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="box"></div>
+		<script type="text/javascript">
+			var oBox=document.getElementById("box")
+			oBox.onclick=function(){
+				var arr=[]
+				var index=0
+				for (var i=30;i>=0;i=i-3) {
+					arr.push(i,-i)
+				}
+				oBox.waver=setInterval(function(){
+					oBox.style.left=parseInt(getStyle(oBox,"left")+arr[index]+"px")
+					index++
+					if (index==arr.length) {
+						clearInterval(oBx.waver)
+					}
+				
+			},100)
+			}
+			oBox.waver=setInterval(function(){
+				var arr=[]
+				var index=0
+				for (var i=30;i<=30,i-=3) {
+					arr.push(i,-i)
+				}
+				
+			},100)
+		</script>
+	</body>
+</html>

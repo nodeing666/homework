@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#wrap {
+				width: 300px;
+				margin: 50px auto;
+				font-size: 0
+			}
+			
+			#wrap div {
+				width: 300px;
+				height: 150px;
+				border: 1px solid black;
+				display: none;
+				box-sizing: border-box;
+				font-size: 18px;
+			}
+			
+			#wrap div:nth-of-type(1) {
+				display: block
+			}
+			
+			#wrap button {
+				width: 75px;
+				background-color: #009f95;
+				border: none;
+				border-radius: 0;
+				color: white;
+				height: 30px;
+			}
+		
+			#wrap button.active {
+				background-color: orangered
+			}
+		</style>
+	</head>
+	<body>
+		<div id="wrap">
+			<!--button表示tab选项-->
+			<button class="active">btn1</button>
+			<button>btn2</button>
+			<button>btn3</button>
+			<button>btn4</button>
+			<!--下面的这些div是具体的显示内容-->
+			<div>11111</div>
+			<div>22222</div>
+			<div>33333</div>
+			<div>44444</div>
+		</div>
+		<script type="text/javascript">
+			var aBtn=document.getElementsByTagName("button")
+			var oWrap=document.getElementById("wrap")
+			var aDiv=oWrap.getElementsByTagName("div")
+			for (var i=0;i<aBtn.length;i++) {
+				aBtn[i].index=i
+				aBtn[i].onmouseover=function(){
+					for (var j=0;j<aDiv.length;j++) {
+						aDiv[j].style.display="none"
+						aBtn[j].style.backgroundColor="#009F95"
+					}
+					aDiv[this.index].style.display="block"
+					aBtn[this.index].style.backgroundColor="orangered"
+				}
+			}
+			//添加自动播放功能
+			autoPlay()
+			var nowIndex=0
+			function autoPlay(){
+				setInterval(function(){
+					nowIndex++
+					nowIndex %= aDiv.length
+					for (var j=0;j<aDiv.length;j++) {
+						aDiv[j].style.display="none"
+						aBtn[j].style.backgroundColor="#009F95"
+					}
+					aDiv[nowIndex].style.display="block"
+					aBtn[nowIndex].style.backgroundColor="orangered"
+				},1000)
+			}
+		</script>
+	</body>
+
+</html>

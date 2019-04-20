@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<input type="text" id="ipt" />
+		<button id="btn1">开始</button>
+		<button id="btn2">结束</button>
+		<!--需求：点开始时抽取随机数，点结束停止-->
+		<script type="text/javascript">
+			var oStart=document.getElementById("btn1")
+			var oStop=document.getElementById("btn2")
+			var oIpt=document.getElementById("ipt")
+			var timer=null
+			//点开始按钮，生成一个n～m的随机数，并放到ipt中
+			oStart.onclick=function(){
+				//解决bug的思路： 在每次开启一个新的定时器之前，先把上次的给清除
+				clearInterval(timer)
+				//开启一个定时器，timer表示定时器的id
+				timer=setInterval(function (){
+					//在没有清除定时器之前，随着点击次数不停增加，定时器会开启得越来越多
+					var randomInt=getRandomInt(10,30);
+					oIpt.value=randomInt;
+				},100)
+			}
+			oStop.onclick=function(){
+				//清除定时器
+				clearInterval(timer);
+			}
+			function getRandomInt(min,max){
+				return Math.floor(Math.random()*(max-min+1)+min);
+			}
+		</script>
+	</body>
+</html>

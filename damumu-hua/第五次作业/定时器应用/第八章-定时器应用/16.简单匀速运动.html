@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#box {
+				width: 100px;
+				height: 100px;
+				background-color: #009F95;
+				position: absolute;
+				left: 100px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div id="box"></div>
+		<button id="start">开始</button>
+		<script type="text/javascript">
+			var oBox=document.getElementById("box")
+			var oStart=document.getElementById("start")
+			var timer=null
+			oStart.onclick=function(){
+				clearInterval(timer)
+				timer=setInterval(function(){
+					var attrValue=parseInt(getStyle(oBox,"left"))+10
+					oBox.style.left=attrValue+"px"
+					if(attrValue==500){
+						clearInterval(timer)
+					}
+				},100)
+			}
+			function getStyle(obj,attr){
+				return window.getComputedStyle?window.getComputedStyle(obj)[attr]:obj.currentStyle[attr]
+			}
+		</script>
+	</body>
+
+</html>

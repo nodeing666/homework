@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			//递归函数：函数中可以再调用别的函数，也可以调用函数本身
+			//需求：用递归函数在body中输出1-3
+			
+			//递进
+//			function print_3(n){
+//				document.write(n+"<br />")
+//				n++;
+//				if(n<=3){ //给递归设定出口：结束的条件
+//					print_3(n)
+//				}
+//			}
+//			print_3(1)
+			
+			//递进+回归=递归
+			function print_3(n){
+				document.write(n+"<br />")
+				n++;
+				if(n<=3){ //给递归设定出口：结束的条件
+					print_3(n)
+				}
+				document.write(n+"<br />")
+			}
+			print_3(1)
+		</script>
+	</body>
+</html>

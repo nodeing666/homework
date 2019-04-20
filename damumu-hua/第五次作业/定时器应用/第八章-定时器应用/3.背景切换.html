@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<button id="btn1">背景切换</button>
+		<button id="btn2">停止</button>
+		<script type="text/javascript">
+			//需求：点击背景切换按钮间隔2秒自动切换一次背景图片，点停止按钮则停止切换
+//			思路:1.绑定鼠标点击事件
+//				2.setInterval(fn,2000)
+//				3.Math.random()获取随机数并返回
+			var oBtn1=document.getElementById("btn1")
+			var oBtn2=document.getElementById("btn2")
+			//给定时器设定id，定时器必用
+			var timer=null
+			//绑定点击事件
+			oBtn1.onclick=function(){
+				//清除上一次的随机数
+				clearInterval(timer)
+				timer=setInterval(function(){
+					var randomInt=getRandomInt(1000,1999)
+					document.body.style.background="url(https://img.infinitynewtab.com/wallpaper/"+randomInt+".jpg) no-repeat"
+					document.body.style.backgroundSize="100%"
+				},1500)
+			}
+			oBtn2.onclick=function(){
+				clearInterval(timer)
+			}
+			function getRandomInt(min,max){
+				return Math.floor(Math.random()*(max-min+1)+min);
+			}
+		</script>
+	</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<img src="img/cc_kefu.png" style="width: 100%;"/>
+		<img id="footer" src="img/footer.png" style="display:none;height: 50px;width:100%;position: fixed;bottom: 0;"/>
+		<script type="text/javascript">
+			var oFooter=document.getElementById("footer")
+			setTimeout(function(){
+				oFooter.style.display="block"
+				setTimeout(function(){
+					oFooter.style.display="none"
+				},3000)
+			},7000)
+		</script>
+	</body>
+</html>

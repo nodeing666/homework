@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body style="height: 2000px; background-color: #808080; margin: 0;">
+		<script type="text/javascript">
+			//获取文档相关，document是一个对象，没有宽高，不能直接获取，要获取html元素，及document.docunmentElement
+			//1.获取文档可视区宽高
+			console.log(document.documentElement.clientHeight)
+			console.log(document.documentElement.clientWidth)
+			//2.获取页面的宽高
+			console.log(document.documentElement.scrollHeight)
+			console.log(document.documentElement.scrollWidth)
+			//3.获取滚动距离
+			console.log(document.documentElement.scrollTop)
+		</script>
+	</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.btn{
+				background-color: red;
+			}
+		</style>
+	</head>
+	<body>
+		<button id="btn">添加</button>
+		<ul id="ul1">
+			<li id="li1">1111</li>
+		</ul>
+		<script type="text/javascript">
+			var oBtn=document.getElementById("btn")
+			var oUl1=document.getElementById("ul1")
+			var oLi1=document.getElementById("li1")
+			oBtn.onclick=function(){
+				//创建一个元素
+				var oLi=document.createElement("li")
+				oLi.innerHTML="nodeing.com"
+				//在最后添加一个子元素
+				oUl1.appendChild(oLi)
+				//在某个元素之前插入一个子元素
+				oUl1.insertBefore(oLi,oLi1)
+				
+			}
+			//删除某个子元素
+			oUl1.onclick=function(ev){
+				var ev=ev||event
+				if (ev.target.nodeName=="LI") {
+					oUl1.removeChild(ev.target)
+				}
+			}
+			//getAttribute/setAttribute
+			document.onclick=function(){
+				alert(oBtn.getAttribute("id"))
+				oBtn.setAttribute("class","btn")
+			}
+		</script>
+	</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#box{
+				width: 500px;
+				height: 400px;
+				border: 1px solid red;
+				margin: 100px auto;
+				overflow: auto;
+			}
+			#dinner-box{
+				width: 700px;
+				height: 600px;
+				background-color: blue;
+				margin: 0 auto;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="box">
+			<div id="dinner-box"></div>
+		</div>
+		<script type="text/javascript">
+			var oBox=document.getElementById("box")
+			document.onclick=function(){
+				//scrollTop内部盒子与外部盒子上边框距离
+				console.log(oBox.scrollTop)
+				//scrollLeft内部盒子与外部盒子左边框距离
+				console.log(oBox.scrollLeft)
+				//scrollHeight内部盒子的总高度，包括padding和margin
+				console.log(oBox.scrollHeight)
+				//scrollWidth内部盒子的总宽度，包括padding和margin
+				console.log(oBox.scrollWidth)
+			}
+		</script>
+	</body>
+</html>

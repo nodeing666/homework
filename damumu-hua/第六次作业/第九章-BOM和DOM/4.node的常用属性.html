@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<div id="wrap">
+			<div>111</div>
+			<div>222</div>
+			<div>333</div>
+			<div>444</div>
+		</div>
+		<script type="text/javascript">
+			var oWrap=document.getElementById("wrap")
+			//获取所有子节点
+			console.log(oWrap.childNodes)
+			//获取所有子节点中的元素节点
+			console.log(oWrap.children)
+			//获取第一个子节点
+			console.log(oWrap.firstChild)
+			//获取最后一个子节点
+			console.log(oWrap.lastChild)
+			//获取父节点
+			console.log(oWrap.parentNode)
+			//获取上一个兄弟节点
+			console.log(oWrap.previousSibling)
+			//获取下一个兄弟节点
+			console.log(oWrap.nextSibling)
+		</script>
+	</body>
+</html>

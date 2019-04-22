@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<button id="btn">打开</button>
+		<button id="cls">关闭</button>
+		<script type="text/javascript">
+			var oBtn=document.getElementById("btn")
+			var oCls=document.getElementById("cls")
+			var w=null
+			oBtn.onclick=function(){
+				//open表示打开一个网页，不传地址默认打开一个新空白页，可以有第二个参数，_self表示在本页打开，
+				//打开新页面后会在原页面返回一个窗口对象
+			 	w=open("http://nodeing.com")
+				console.log(w)
+			}
+			oCls.onclick=function(){
+				w.close()
+			}
+		</script>
+	</body>
+</html>

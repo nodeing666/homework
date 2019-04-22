@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#box{
+				width: 150px;
+				height: 200px;
+				background-color: red;
+				display: none;
+				position: absolute;
+			}
+		</style>
+	</head>
+	<body style="height: 2000px;">
+		<div id="box"></div>
+		<script type="text/javascript">
+//			document.onkeydown=function(){
+//				return false;
+//			}
+		document.addEventListener("keydown",function(ev){
+			var ev=ev||event
+			//阻止默认行为
+			ev.preventDefault()
+		},false)
+		//需求：右键阻止原有默认弹框，并显示box，及鼠标点哪显示在哪
+		var oBox=document.getElementById("box")
+		document.oncontextmenu=function(ev){
+			//用ev事件记录鼠标点击位置
+			var ev=ev||event
+			oBox.style.display="block"
+			oBox.style.left=ev.clientX+"px"
+			oBox.style.top=ev.clientY+"px"
+			return false
+		}
+		document.onclick=function(){
+			oBox.style.display="none"
+		}
+		</script>
+	</body>
+</html>

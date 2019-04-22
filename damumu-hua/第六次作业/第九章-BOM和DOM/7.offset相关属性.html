@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#box{
+				width: 500px;
+				height: 400px;
+				border: 1px solid red;
+				margin: 100px auto;
+				position: relative;
+			}
+			#dinner-box{
+				width: 50px;
+				height: 50px;
+				background-color: blue;
+				position: absolute;
+				top: 100px;
+				left: 100px;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="box">
+			<div id="dinner-box"></div>
+		</div>
+		<script type="text/javascript">
+			var oBox=document.getElementById("box")
+			var oDinner=document.getElementById("dinner-box")
+			oDinner.onclick=function(){
+				//盒子与父元素盒子的边框距离
+				console.log(oDinner.offsetLeft)
+				console.log(oDinner.offsetTop)
+				//盒子的总宽度和高度
+				console.log(oDinner.offsetWidth)
+				console.log(oDinner.offsetHeight)
+				//对父盒子作用
+				console.log(oDinner.offsetParent.id)
+			}
+		</script>
+	</body>
+</html>

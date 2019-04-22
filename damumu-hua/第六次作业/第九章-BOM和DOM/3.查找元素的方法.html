@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="active"></div>
+			<div></div>
+			<div></div>
+		</div>
+		<script type="text/javascript">
+			//通过id
+			var oWrap=document.getElementById("wrap")
+			//通过类名（集合）
+			var oActive=document.getElementsByClassName("active")
+			//通过标签（集合）
+			var aDiv=document.getElementsByTagName("div")
+			//W3C规范，相对较慢
+			var aDiv2=document.querySelectorAll("#wrap div")
+			//只返回一个，加了All返回所有符合条件的
+			var aDiv3-document.querySelector("div")
+		</script>
+	</body>
+</html>

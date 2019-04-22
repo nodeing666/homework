@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<div id="box"></div>
+		<input type="text" id="ipt" />
+		<button id="btn">添加</button>
+		<ul id="ul1"></ul>
+		<script type="text/javascript">
+			var oBox=document.getElementById("box")
+			console.log(oBox.nodeName)
+			//需求：给ul添加li，点击li使背景色发生变化
+			var oIpt=document.getElementById("ipt")
+			var oBtn=document.getElementById("btn")
+			var oUl1=document.getElementById("ul1")
+			oBtn.onclick=function(){
+				var aLi=document.createElement("li")
+				aLi.innerHTML=oIpt.value
+				oUl1.appendChild(aLi)
+			}
+			//点击li背景色发生变化,冒泡机制，用父元素绑定点击事件即可
+			oUl1.onclick=function(ev){
+				//过滤点击li外使整个ul变色情况
+				if (ev.target.nodeName=="LI") {
+					var ev=ev||event
+					ev.target.style.backgroundColor="red"
+				}
+			}
+		</script>
+	</body>
+</html>

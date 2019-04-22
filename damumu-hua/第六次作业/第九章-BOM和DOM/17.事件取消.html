@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<button id="btn">点击</button>
+		<button id="btn2">取消点击</button>
+		<script type="text/javascript">
+			var oBtn=document.getElementById("btn")
+			var oBtn2=document.getElementById("btn2")
+//			//1.第一种事件取消
+//			oBtn.onclick=function(){
+//				alert("1")
+//			}
+//			oBtn2.onclick=function(){
+//				alert("取消点击")
+//				oBtn.onclick=null
+//			}
+			//第二种事件取消：addEventListener
+			function fn1(){
+				alert("1")
+			}
+			addEvent(oBtn,"click",fn1)
+			addEvent(oBtn2,"click",function(){
+				removeEvent(oBtn,"click",fn1)
+			})
+			removeEvent(oBtn2,)
+			function addEvent(obj, type, fn) {
+				if(obj.addEventListener) {
+					obj.addEventListener(type, fn, false);
+				} else if(obj.attachEvent) {
+					obj.attachEvent('on' + type, fn);
+				} else {
+					obj['on' + type] = fn;
+				}
+			}
+			//取消
+			function removeEvent(obj, type, fn) {
+				if(obj.removeEventListener) {
+					obj.removeEventListener(type, fn, false);
+				} else if(obj.detachEvent) {
+					obj.detachEvent('on' + type, fn);
+				} else {
+					obj['on' + type] = null;
+				}
+			}
+		</script>
+	</body>
+</html>

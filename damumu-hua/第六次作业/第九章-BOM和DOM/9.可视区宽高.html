@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#box{
+				height: 200px;
+				width: 400px;
+				border: 2px solid red;
+				margin: 100px auto;
+				padding: 10px;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="box"></div>
+		<script type="text/javascript">
+			var oBox=document.getElementById("box")
+			document.onclick=function(){
+				//clientwidth和clientheight  包含设置的宽高和padding
+				console.log(oBox.clientWidth)
+				console.log(oBox.clientHeight)
+				//offsetwidth和offsetheight  包含设置的宽高和padding+border
+				console.log(oBox.offsetWidth)
+				console.log(oBox.offsetHeight)
+			}
+		</script>
+	</body>
+</html>

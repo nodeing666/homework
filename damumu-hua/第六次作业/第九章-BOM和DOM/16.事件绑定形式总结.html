@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<button id="btn"  >按钮</button>
+		<script type="text/javascript">
+			//1 直接在元素上写事件绑定 onclick="fn()"
+			function fn(){
+				alert(1)
+			}
+			function fn1(){
+				alert(2)
+			}
+			// 2 对象.onclick = 事件处理函数
+			var oBtn = document.getElementById("btn")
+//			oBtn.onclick = fn;
+			//后面这个会把前面的覆盖
+//			oBtn.onclick = fn1;
+			//3 addEventListener
+//			oBtn.addEventListener("click", fn, false)
+//			oBtn.addEventListener("click", fn1, false)
+			
+			//处理addEvent这种形式事件绑定兼容性问题
+			function addEvent(obj, type, fn){
+				//例如：Chrome (obj.addEventListener）就是有值，如果是ie低版本，undefined
+			    if(obj.addEventListener){  //在标准浏览器下支持
+			        obj.addEventListener(type, fn, false);
+			    } else if(obj.attachEvent){// ie就走这里
+			    	//如果是ie obj.attachEvent 就有值，true
+			    		//第一个参数是事件类型，click, ie下没有第三个参数，不支持捕获
+			    		//oBtn.attachEvent("onclick", fn)
+			        obj.attachEvent('on' + type, fn);
+			    } else {
+			    	//	oBtn.onclick = fn
+			        obj['on' + type] = fn;
+			    }
+			}
+			addEvent(oBtn, "click", fn)
+		</script>
+	</body>
+</html>

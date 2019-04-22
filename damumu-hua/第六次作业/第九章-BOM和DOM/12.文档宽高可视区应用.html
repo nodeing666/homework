@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#wrap{
+				height: 400px;
+				width: 100%;
+				background-color: rgba(0,0,0,0.5);
+				position: absolute;
+				left: 0;
+				top: 0;
+				display: none;
+			}
+			#box{
+				height: 200px;
+				width: 200px;
+				background-color: white;
+				position: fixed;
+				left: 100px;
+				top: 100px;
+			}
+			h1{
+				font-size: 12px;
+				color: white;
+				background-color: green;
+			}
+		</style>
+	</head>
+	<body style="height: 2000px;">
+		<button id="btn">点击</button>
+		<div id="wrap">
+			<div id="box">
+				<h1>登陆</h1>
+			</div>
+		</div>
+		<script src="js/tools.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			var oWrap=document.getElementById("wrap")
+			var oBox=document.getElementById("box")
+			var oBtn=document.getElementById("btn")
+			oBtn.onclick=function(){
+				changeWindow()
+			}
+			oWrap.onclick=function(){
+				oWrap.style.display="none"
+			}
+			//解决缩小窗口时出现的问题
+			window.onresize=function(){
+				changeWindow()
+
+			}
+		</script>
+	</body>
+</html>

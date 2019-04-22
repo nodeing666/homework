@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<div id="box">111<!----></div>
+		<ul id="ul1">
+			<li>11</li>
+			<li>22</li>
+			<li>33</li>
+			<li>44</li>
+		</ul>
+		<script type="text/javascript">
+			var oBox=document.getElementById("box")
+			//表示第一个字节点
+			var oCom=oBox.firstChild
+			console.log(oBox.nodeType)
+			console.log(document.nodeType)
+			console.log(oCom.nodeType)
+			//应用场景：通常遍历节点的时候用来判断类型，实现过滤
+			//需求：点击document，使li变背景色
+			var oUl1=document.getElementById("ul1")
+			//通过节点的方式来找li，childnodes表示返回所有的子节点
+			var aNodes=oUl1.childNodes
+//			console.log(aNodes)
+			//因为每个li前都存在空格（文档节点），所以需要过滤
+			oUl1.onclick=function(){
+				for (var i=0;i<aNodes.length;i++) {
+					if (aNodes[i].nodeType==1) {
+						aNodes[i].style.backgroundColor="red"
+					}
+				}
+			}
+		</script>
+	</body>
+</html>

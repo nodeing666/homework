@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			// window.navigator.userAgent 返回一个字符串 包含浏览器的相关信息
+			console.log(window.navigator.userAgent)
+			//indexOf里面传入一个字符串(Chrome)，如果这个字符串在前面的字符串中，返回一个具体位置，如果没有返回-1
+			if(window.navigator.userAgent.indexOf("Chrome") == -1){
+			    alert("当前不是chrome浏览器")
+			}else{
+			    alert("当前浏览器是chrome")
+			}
+			//和地址栏相关的属性
+			//得到访问的地址
+			console.log(window.location.href)
+			//得到地址栏问号后面的东西 ?wd="xxx"&age=13 查询字符串
+			console.log(window.location.search)
+			//得到地址栏 # 号后面的内容
+			console.log(window.location.hash)		
+		</script>
+	</body>
+</html>

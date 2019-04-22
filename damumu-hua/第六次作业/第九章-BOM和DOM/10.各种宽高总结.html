@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#box{
+				width: 300px;
+				height: 300px;
+				border: 1px solid red;
+				margin: 100px auto;
+				overflow: auto;
+			}
+			#inner-box{
+				height: 500px;
+				width: 300px;
+				margin: 0 auto;
+				background-color: gray;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="box">
+			<div id="inner-box"></div>
+		</div>
+		<script type="text/javascript">
+			var oBox=document.getElementById("box")
+			document.onclick=function(){
+				//在无滚动条情况下，client和scroll一样，offset相对多了border
+				console.log(oBox.offsetWidth) //302
+				console.log(oBox.clientWidth) //300
+				console.log(oBox.scrollWidth) //300
+				//出现滚动条时
+				console.log("======>")
+				console.log(oBox.offsetHeight) //302
+				console.log(oBox.clientHeight) //300
+				console.log(oBox.scrollHeight) //300
+			}
+		</script>
+	</body>
+</html>

@@ -1,0 +1,75 @@
+/*下面是各个页面会用到的公共样式，这里独立出来*/
+html,body{
+  font: 14px/1.5 Helvetica, Tahoma, Arial, "Hiragino Sans GB", "Microsoft YaHei", SimSun, Heiti, sans-serif;
+  /*color: #515151;*/
+}
+/*整个页面会有一个默认的背景色*/
+html{
+  background-color: #ffffff;
+}
+
+.fl{
+  float: left;
+}
+
+.fr{
+  float: right;
+}
+
+.clearfix:after{
+  content: '';
+  display: block;
+  clear: both;
+}
+
+/*公用按钮*/
+.btn{
+  display: inline-block;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 4px;
+  outline: 0;
+  cursor: pointer;
+  text-align: center;
+  vertical-align: middle;
+  font-size: 14px;
+  min-width: 58px;
+  min-height: 34px;
+  line-height: 34px;
+  transition: .5s all;
+  padding: 0 20px;
+  user-select: none;
+  box-sizing: border-box;
+}
+
+.success{
+  color: #fff;
+  border-color: #00c3f5;
+  background-color: #00c3f5;
+}
+
+.success:hover{
+  border-color: #40d2f8;
+  background-color: #40D2F8;
+}
+
+.danger{
+  color: #fff;
+  border-color: #f66567;
+  background-color: #f66567;
+}
+
+.danger:hover{
+  border-color: #fe7476;
+  background-color: #fe7476;
+}
+
+.cancel{
+  color: #999;
+  border-color: #EFEFEF;
+  background-color: #EFEFEF;
+}
+.cancel:hover{
+  border-color: #F6F6F6;
+  background-color: #F6F6F6;
+}

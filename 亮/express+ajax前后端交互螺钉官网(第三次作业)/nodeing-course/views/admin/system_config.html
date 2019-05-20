@@ -1,0 +1,187 @@
+﻿		<%- include('header_add.html')%>
+
+		<div class="main-container" id="main-container">
+			<script type="text/javascript">
+				try{ace.settings.check('main-container' , 'fixed')}catch(e){}
+			</script>
+
+			<div class="main-container-inner">
+				<a class="menu-toggler" id="menu-toggler" href="#">
+					<span class="menu-text"></span>
+				</a>
+
+				<%- include('sidebar.html') %>
+
+				<div class="main-content">
+					<div class="breadcrumbs" id="breadcrumbs">
+						<script type="text/javascript">
+							try{ace.settings.check('breadcrumbs' , 'fixed')}catch(e){}
+						</script>
+
+						<ul class="breadcrumb">
+							<li>
+								<i class="icon-home home-icon"></i>
+								<a href="#">首页</a>
+							</li>
+							<li class="active">系统设置</li>
+						</ul><!-- .breadcrumb -->
+
+						<div class="nav-search" id="nav-search">
+							<form class="form-search">
+								<span class="input-icon">
+									<input type="text" placeholder="Search ..." class="nav-search-input" id="nav-search-input" autocomplete="off" />
+									<i class="icon-search nav-search-icon"></i>
+								</span>
+							</form>
+						</div><!-- #nav-search -->
+					</div>
+
+					<div class="page-content">
+
+						<div class="page-header">
+							<h1>
+								系统设置								
+							</h1>
+						</div><!-- /.page-header -->
+
+					<form class="form-horizontal" role="form">
+
+							<!-- 设置个隐藏id -->
+							<div class="form-group">
+
+								<div class="col-sm-10" id="system_id">
+									<input type="hidden" id="form-field-1" placeholder="" value="<%= data.id %>" class="col-xs-10 col-sm-5">
+								</div>
+							</div>
+
+							<div class="form-group">
+								<label class="col-sm-2 control-label no-padding-right" for="form-field-1">网站标题:</label>
+
+								<div class="col-sm-10" id="web_title">
+									<input type="text" id="form-field-1" value="<%= data.web_title%>" placeholder="" class="col-xs-10 col-sm-5">
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="col-sm-2 control-label no-padding-right" for="form-field-1">网站副标题:</label>
+
+								<div class="col-sm-10" id="web_subheading">
+									<input type="text" id="form-field-1" value="<%= data.web_subheading%>" placeholder="" class="col-xs-10 col-sm-5">
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="col-sm-2 control-label no-padding-right" for="form-field-1">网站描述:</label>
+
+								<div class="col-sm-10" id="web_description">
+									<textarea id="form-field-1"  placeholder="" class="col-xs-10 col-sm-5"><%= data.web_description %></textarea>
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="col-sm-2 control-label no-padding-right" for="form-field-1">网站logo:</label>
+
+								<div class="col-sm-10" id="web_log">
+									<input type="text" id="form-field-1" value="<%= data.web_log%>" placeholder="" class="col-xs-10 col-sm-5">
+								</div>
+							</div>
+
+							<div class="form-group">
+								<label class="col-sm-2 control-label no-padding-right" for="form-field-2">管理员邮箱:</label>
+
+								<div class="col-sm-10" id="web_email">
+									<input type="text" id="form-field-2" value="<%= data.web_email%>" placeholder="" class="col-xs-10 col-sm-5">
+								 
+								</div>
+							</div>
+							
+							<div class="form-group">
+								<label class="col-sm-2 control-label no-padding-right" for="form-field-1">二维码图片地址:</label>
+
+								<div class="col-sm-10" id="web_code_log">
+									<input type="text" id="form-field-1" value="<%= data.web_code_log%>" placeholder="" class="col-xs-10 col-sm-5">
+								</div>
+							</div>
+							
+							<div class="form-group">
+								<label class="col-sm-2 control-label no-padding-right" for="form-field-1">网站版权:</label>
+
+								<div class="col-sm-10" id="web_copyright">
+									<input type="text" id="form-field-1" value="<%= data.web_copyright%>" placeholder="" class="col-xs-10 col-sm-5">
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="col-sm-2 control-label no-padding-right" for="form-field-1">网站备案号:</label>
+
+								<div class="col-sm-10" id="web_beAn">
+									<input type="text" id="form-field-1" value="<%= data.web_beAn%>" placeholder="" class="col-xs-10 col-sm-5">
+								</div>
+							</div>
+							<div class="form-group">
+							 
+								<div class="col-sm-6 center">
+									<button class="btn btn-primary" id="btn" type="button">保存</button>
+									<button class="btn btn-danger">取消</button>
+								</div>
+							</div>
+					</form>
+					 
+					</div>
+				</div><!-- /.main-content -->
+			
+			</div><!-- /.main-container-inner -->
+
+			<a href="#" id="btn-scroll-up" class="btn-scroll-up btn btn-sm btn-inverse">
+				<i class="icon-double-angle-up icon-only bigger-110"></i>
+			</a>
+		</div><!-- /.main-container -->
+
+		<%- include('footer.html')%>
+
+		<script src="/admin/js/jquery-2.0.3.min.js"></script>
+
+		<script>
+			$(function () {
+				$('#btn').click(function () {
+					var web_title = $('#web_title input').val();
+
+					var web_subheading = $('#web_subheading input').val();
+
+					var web_description = $('#web_description textarea').val();
+
+					var web_log = $('#web_log input').val();
+
+					var web_email = $('#web_email input').val();
+
+					var web_code_log = $('#web_code_log input').val();
+
+					var web_copyright = $('#web_copyright input').val();
+
+					var web_beAn = $('#web_beAn input').val();
+
+					var system_id = $('#system_id input').val();
+
+					// console.log(web_beAn)
+					if (web_title.length === '' || web_copyright.length === '' || web_beAn.length === '') {
+						alert('网站标题、版权、备案号不能为空');
+						return;
+					}
+
+					$.get('/admin/system/findSystem', function (result) {
+						if (result.success === 'success') {
+							$.get('/admin/system/setting', {web_title: web_title, web_subheading: web_subheading, web_description: web_description, web_log: web_log, web_email: web_email, web_code_log: web_code_log, web_copyright: web_copyright, web_beAn: web_beAn} ,function (result) {
+								alert(result.data);
+							});
+						} else {
+							$.get('/admin/system/updateSystem', {web_title: web_title, web_subheading: web_subheading, web_description: web_description, web_log: web_log, web_email: web_email, web_code_log: web_code_log, web_copyright: web_copyright, web_beAn: web_beAn, system_id: system_id}, function (result) {
+								alert(result.data);
+								window.location.reload();
+							});
+						}
+					});
+
+					
+				});
+			});
+		</script>
+		
+</body>
+</html>
+

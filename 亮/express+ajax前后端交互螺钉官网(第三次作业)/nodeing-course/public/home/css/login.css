@@ -1,0 +1,84 @@
+.content{
+	width: 100%;
+	padding: 0;
+	height: 740px;
+	background: url(../img/login/Distantdream.png) no-repeat ;
+	/*background-color: red;*/
+	    background-position: 0 -71px;
+    background-size: 100% 110%;
+	margin-bottom: 0;
+	
+}
+.login{
+	width: 311px;
+	height: 414px;
+	background-color:rgba(	245, 245, 245,.5);
+	position: absolute;
+	right: 30px;
+	top: 85px;
+	border-radius: 10px;
+	text-align: center;
+}
+.login  h3{
+	font-size: 29px;
+	color: white;
+	font-weight: normal;
+	margin-top: 54px;
+	margin-bottom: 37px;
+}
+.login .group{
+	padding-left: 13px;
+	color: white;
+	padding-left: 5px;
+	padding-top: 10px;
+	box-sizing: border-box;
+	text-align: center;
+	width: 223px;
+	height: 46px;
+	background-color: #7F7174;
+	margin-left: 43px;
+	margin-bottom: 34px;
+	border-radius: 23px;
+	/*box-shadow:0px 0px 10px 5px #aaa inset*/
+}
+
+.login .group label{
+	display: inline-block;
+	height: 26px;
+	width: 31px;
+	background: url(../img/login/User.png) no-repeat 100%;
+	vertical-align: middle;
+}
+.login .group label.password{
+	background: url(../img/login/Key.png) no-repeat 100%;
+}
+.login .group input{
+	
+	background-color: #7F7174;
+	width: 160px;
+	height: 23px;
+	font-size: 15px;
+	/*color: white;*/
+}
+
+input::-webkit-input-placeholder { /* WebKit browsers */ 
+	color: white; 
+}
+.login button{
+	background-color: #E8871F;
+	border: none;
+	padding: 7px 54px;
+	font-size: 23px;
+	color: white;
+	border-radius: 20px;
+	margin-bottom: 5px;
+	cursor: pointer;
+} 
+.login a{
+	text-decoration: underline;
+	font-size: 12px;
+	color: white;
+}
+.footer{
+	border-top: none;
+}

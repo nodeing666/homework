@@ -1,0 +1,23 @@
+<!-- 底部公共部分模版 -->
+<div id="footer" class="footer">
+    <div class="wrap">
+        <div class="logo center" id="footerLogo">
+            <img src="/home/img/index/logo.png"/>
+        </div>
+        <div class="footer-text">
+            <p>
+                <% for (var i = 0; i < arrData.data2.length; i++) { %>
+                      <a href="#"><%= arrData.data2[i].link_name%></a>|&nbsp;&nbsp;&nbsp;&nbsp;
+                <% } %>
+                <!-- <a href="#">学习路线</a>|&nbsp;&nbsp;&nbsp;&nbsp;
+                <a href="#">资料下载</a>|&nbsp;&nbsp;&nbsp;&nbsp;
+                <a href="#">会员</a>|&nbsp;&nbsp;&nbsp;&nbsp;
+                <a href="#">常见问题</a>|&nbsp;&nbsp;&nbsp;&nbsp;
+                <a href="#">QQ交流群</a>|&nbsp;&nbsp;&nbsp;&nbsp; -->
+            </p>
+            <p id="info">
+                <span><%= arrData.data3.web_copyright%></span>  <span><%= arrData.data3.web_beAn %></span>
+            </p>
+        </div>
+    </div>
+</div>

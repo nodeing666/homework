@@ -1,0 +1,241 @@
+﻿	<%- include('header_list.html')%>
+
+	<div class="main-container" id="main-container">
+		<script type="text/javascript">
+			try{ace.settings.check('main-container' , 'fixed')}catch(e){}
+		</script>
+
+		<div class="main-container-inner">
+			<a class="menu-toggler" id="menu-toggler" href="#">
+				<span class="menu-text"></span>
+			</a>
+
+			<%- include('sidebar.html') %>
+
+			<div class="main-content">
+				<div class="breadcrumbs" id="breadcrumbs">
+					<script type="text/javascript">
+						try{ace.settings.check('breadcrumbs' , 'fixed')}catch(e){}
+					</script>
+
+					<ul class="breadcrumb">
+						<li>
+							<i class="icon-home home-icon"></i>
+							<a href="/">首页</a>
+						</li>
+						<li class="active">用户列表</li>
+					</ul><!-- .breadcrumb -->
+
+					<div class="nav-search" id="nav-search">
+						<form class="form-search">
+							<span class="input-icon">
+								<input type="text" placeholder="Search ..." class="nav-search-input" id="nav-search-input" autocomplete="off" />
+								<i class="icon-search nav-search-icon"></i>
+							</span>
+						</form>
+					</div><!-- #nav-search -->
+				</div>
+
+				<div class="page-content">
+
+					<div class="page-header">
+						<h1>
+							用户列表								
+						</h1>
+					</div><!-- /.page-header -->
+
+
+
+					<!--表格-->
+
+					<div class="table-responsive">
+						<table id="sample-table-1" class="table table-striped table-bordered table-hover center">
+							<thead>
+								<tr>
+									
+									<th class="center">编号</th>
+									<th class="center">用户名</th>
+									<th class="hidden-480 center">邮箱</th>
+									<th class="hidden-480 center">角色</th>
+									<th class="center">
+										<i class="icon-time bigger-110 hidden-480"></i>
+										加入时间
+									</th>
+									<th class="center">状态</th>
+
+									<th width="80px;" class="center">操作</th>
+								</tr>
+							</thead>
+
+							<tbody>
+										
+								<% for (var i = 0; i < data.length; i++) { %>
+
+									<tr>
+										<!-- <%= data[i]%>
+
+										<% for (var j = 0; j < data[i].length; j++) { %>
+											<td><%= data[i][j]%></td>
+										<%}%> -->
+
+										<td id="userId"><%= data[i].id%></td>
+										<td><%= data[i].username%></td>
+										<td><%= data[i].email%></td>
+										<td><%= data[i].role%></td>
+										<td><%= data[i].create_time ==""?'--':new Date((data[i].create_time)).toLocaleString().replace(new RegExp('/','g'),"-")%></td>	
+										<!-- data[i].create_time ==""?'--':
+											new Date((data[i].create_time))
+											.toLocaleString().replace(new RegExp('/','g'),"-") :
+											这条表示将后台返回的时间戳转换成时间日期格式
+										-->
+										<td><%= data[i].status%></td>
+
+										<td>
+											<div class="visible-md visible-lg hidden-sm hidden-xs btn-group center">
+												
+	
+												<a href='/admin/user/edit?id=<%=data[i].id %>' class="btn btn-xs btn-info" id="update">
+													<i class="icon-edit bigger-120"></i>
+													<!-- <a  style="color: white; text-decoration: none"></a> -->
+												</a>
+												&nbsp;
+												
+												<!-- 删除用户 -->
+												<button class="btn btn-xs btn-danger" id="btn">
+													<i class="icon-trash bigger-120" ></i>
+												</button>
+		
+												</div>
+		
+											</td>
+
+									</tr>
+									
+								<% } %>
+								
+								
+
+								<!-- <tr class="">
+								
+
+								<td>
+									2
+								</td>
+								<td>lisa</td>
+								<td class="hidden-480">3,330</td>
+								<td>普通用户</td>
+								<td>Feb 12</td>
+
+								<td class="hidden-480">
+										<button class="btn btn-xs btn-success">
+											<i class="icon-ok bigger-120"></i>
+										</button>
+								</td>
+
+								<td>
+									<div class="visible-md visible-lg hidden-sm hidden-xs btn-group center">
+										
+
+										<button class="btn btn-xs btn-info">
+											<i class="icon-edit bigger-120"></i>
+										</button>
+										&nbsp;
+
+									
+										<button class="btn btn-xs btn-danger">
+											<i class="icon-trash bigger-120"></i>
+										</button>
+
+									</div>
+
+								</td>
+							</tr> -->
+
+
+								<!-- <tr class="">
+								
+
+								<td>
+									3
+								</td>
+								<td>nodeing</td>
+								<td class="hidden-480">3,330</td>
+								<td>管理员</td>
+								<td>Feb 12</td>
+
+								<td class="hidden-480">
+										<button class="btn btn-xs btn-success">
+											<i class="icon-ok bigger-120"></i>
+										</button>
+								</td>
+
+								<td>
+									<div class="visible-md visible-lg hidden-sm hidden-xs btn-group center">
+										
+
+										<button class="btn btn-xs btn-info">
+											<i class="icon-edit bigger-120"></i>
+										</button>
+										&nbsp;
+										<button class="btn btn-xs btn-danger">
+											<i class="icon-trash bigger-120"></i>
+										</button>
+
+									</div>
+
+								</td>
+							</tr> -->
+
+
+							</tbody>
+						</table>
+					</div>
+
+				</div>
+			</div><!-- /.main-content -->
+		
+		</div><!-- /.main-container-inner -->
+
+		<a href="#" id="btn-scroll-up" class="btn-scroll-up btn btn-sm btn-inverse">
+			<i class="icon-double-angle-up icon-only bigger-110"></i>
+		</a>
+	</div><!-- /.main-container -->
+
+	<%- include('footer.html')%>
+
+	<script src="/admin/js/jquery-2.0.3.min.js"></script>
+
+	<script>
+		$(function() {
+			// var userId = document.getElementById('userId');
+			// console.log(userId.innerHTML)
+			
+			$('#sample-table-1').on('click','#btn', function () {
+				var userId = $(this).closest('tr').find('td').eq(0).html();
+				//closest('tr')：表示获取到最近的这个父级tr。
+				//获取到当前点击的最近的这个父级tr，再查找它的td，下标为0，将它的html内容拿到给userId。
+				
+				$.post('/admin/user/deleteUser', {id: userId}, function (result) {
+					if (result.success === 'success') {
+						//刷新当前页面
+						window.location.reload();
+					}else{
+						alert(result.error)
+					}
+				});
+
+			});
+
+			// $('#sample-table-1').on('click', '#update', function (e) {
+			// 	var userId = $(this).closest('tr').find('td').eq(0).html();
+			// 	$.get('/admin/user/edit',{id: userId}, function (result) {
+			// 		console.log(result)
+			// 	});
+			// });
+
+		});
+	</script>
+	
+</body>
+</html>
+

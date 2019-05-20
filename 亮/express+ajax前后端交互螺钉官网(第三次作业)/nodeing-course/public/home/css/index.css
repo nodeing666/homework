@@ -1,0 +1,198 @@
+.top{
+	background-color: white;
+}
+.top .wrap{
+	height: 71px;
+}
+.top .logo{
+	display: inline-block;
+	width: 164px;
+	height: 49px;
+}
+.top .logo img{
+	width: 100%;
+	height: 100%;
+}
+.top .nav{
+	height: 71px;
+	margin-left: 215px;
+	position: relative;
+	/*line-height: 71px;*/
+}
+.top .nav>a{
+	margin: 24px 40px;
+	padding: 1px 17px;
+	box-sizing: border-box;
+	display: inline-block;
+	height: 25px;
+	border-radius: 16px;
+	font-size: 16px;
+	color: #383838;
+}
+.top .nav span{
+	display: inline-block;
+	font-size: 14px;
+	cursor: pointer;
+}
+.top .nav span a{
+	color: #383838;
+	font-size: 16px;
+}
+.top .nav .login{
+	margin-left: 55px;
+}
+.top .nav a.active{
+	background-color: #E15671;
+}
+
+.content{
+	background-image: url(../img/index/bg2.png);
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+}
+.content-text{
+	color: white;
+	background-color: transparent;
+}
+.content-text h1{
+	font-size: 38px;
+
+}
+.content-text h2{
+	font-size: 30px;
+	margin-top: 16px;
+	margin-bottom: 10px;
+	color: #06E9E6;
+}
+.content-text p{
+	font-size: 16px;
+	line-height: 27px;
+}
+.content-text .wechat{
+	position: relative;
+	margin-top: 10px;
+	height: 123px;
+	/*line-height: 123px;*/
+	width: 361px;
+	background-color: #2D2249;
+	/*text-align: center;*/
+}
+.content-text .wechat .img{
+	height: 99px;
+	width: 99px;
+	margin-left: 12px;
+}
+.content-text .wechat .text{
+	font-size: 20px;
+	margin-left: 130px;
+	width: calc(100% - 162px);
+	/*background-color: red;*/
+	height: 100%;
+	padding-top: 33px;
+	box-sizing: border-box;
+}
+.content-text .text-item{
+	margin-top: 35px;
+	display: inline-block;
+	font-size: 14px;
+}
+.content-text .text-item:nth-of-type(2){
+	color: #4D8362;
+}
+.content-text .text-item:nth-of-type(4){
+	color: #5599A5;
+}
+.content-text .text-item:nth-of-type(3){
+	margin:0 40px;
+	color: #E65F1F;
+}
+.content-text .text-item img{
+	vertical-align: middle;
+}
+
+.content-list{
+	background-color: transparent;
+	position: relative;
+}
+.content-list .list-item{
+	float: left;
+	width: 253px;
+	height: 255px;
+	margin: 4px;
+	background-color: orange;
+	padding-top: 30px;
+	padding-left: 18px;
+	box-sizing: border-box;
+	cursor: pointer;
+}
+.content-list .list-item span{
+	color: white;
+}
+.content-list .list-item span:nth-of-type(1){
+	font-size: 28px;
+}
+.content-list .list-item span:nth-of-type(2){
+	font-size: 20px;
+
+}
+.content-list .list-item:nth-of-type(1){
+	/* background: url(../img/index/foundation.png) no-repeat 75px 113px; */
+	background-color: #6067D5;
+}
+/* .content-list .list-item:nth-of-type(2){
+	background: url(../img/index/progress.png) no-repeat 75px 113px;
+	background-color: #9965E2;
+}
+.content-list .list-item:nth-of-type(3){
+	background: url(../img/index/senior.png) no-repeat 75px 113px;
+	background-color: #FBC00D;
+}
+.content-list .list-item:nth-of-type(4){
+	background: url(../img/index/strengthen.png) no-repeat 75px 113px;
+	background-color: #62C464;
+}
+.content-list .list-item:nth-of-type(5){
+	background: url(../img/index/mobile.png) no-repeat 75px 113px;
+	background-color: #E04571;
+}
+.content-list .list-item:nth-of-type(6){
+	background: url(../img/index/fullStack.png) no-repeat 75px 113px;
+	background-color: #2CB3CB;
+} */
+
+.list-item span:nth-of-type(3){
+	position: relative;
+	left: -40px;
+	top: 90px;
+	font-size: 40px;
+	font-weight: bold;
+}
+
+.footer{
+	background-color: white;
+	border-top: 2px solid #E04571;
+}
+.footer .wrap{
+	height: 141px;
+}
+.footer .logo:after{
+	content: "";
+	display: inline-block;
+	height: 49px;
+	width: 2px;
+	background-color: #DFDFDF;
+}
+.footer .footer-text{
+	margin-left: 212px;
+	padding-top: 42px;
+	color: #9B9B9B;
+	box-sizing: border-box;
+}
+.footer .footer-text p{
+	line-height: 30px;
+}
+.footer .footer-text a{
+	margin-right: 35px;
+	color: #9B9B9B;
+	font-size: 16px;
+}

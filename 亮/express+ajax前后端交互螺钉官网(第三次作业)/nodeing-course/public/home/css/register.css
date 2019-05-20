@@ -1,0 +1,10 @@
+
+.login{
+	height: 473px;
+}
+.login .group{
+	margin-bottom: 23px;
+}
+.login .group label{
+	background: url(../img/login/email.png) no-repeat 100%;
+}

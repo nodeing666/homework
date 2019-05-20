@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="/home/css/base.css"/>
+		<link rel="stylesheet" type="text/css" href="/home/css/public.css"/>
+		<link rel="stylesheet" type="text/css" href="/home/css/index.css"/>
+        <!-- <script src="./js/ajax.js"></script> -->
+        
+	</head>
+	<body>
+
+        <!-- 使用ejs模版引擎语法，引用头部模版 -->
+		<%- include('header.html')%>
+		<div id="content" class="content">
+			<div class="wrap clearfix">
+				<div class="content-text" id="content-text">
+					<h1>螺钉课堂在线学习</h1>
+					<h2> 0基础编程入行必备网站 </h2>
+					<p>螺钉课堂的前端知识体系庞大、内容精炼、轨迹清晰、 通俗易懂，可能是在校学生，
+						想转业的朋友学习编辑 的最佳途径；在QQ群里面，我想转业的朋友学习编辑 的最佳途径；在QQ群里面，我</p>
+					<div class="wechat" id="wechat">
+						<div class="img center" id="wechatlogo">
+							<img src="/home/img/index/wechat.png"/>
+						</div>
+
+						<div class="text" id="text">
+							<p>打开微信，扫码进入小程序使用手机学习</p>
+						</div>
+
+					</div>
+					<div class="text-item">
+						<img src="/home/img/index/course.png"/> 学习路线
+					</div>
+					<div class="text-item">
+						<img src="/home/img/index/return.png"/> 学习路线
+					</div>
+					<div class="text-item">
+						<img src="/home/img/index/qq.png"/> 学习路线
+					</div>
+                </div>
+                
+				<div class="content-list clearfix" id="content-list">
+
+                    <% for (var i = 0; i < arrData.data4.length; i++) { %>
+                        
+                            <a href="<%=arrData.data4[i].url%>?name=<%= arrData.data4[i].name %> ">
+                                <div class="list-item" id="list-item-1">
+                                    <span><%= arrData.data4[i].name %></span> <br />
+                                    <span><%= arrData.data4[i].description %></span>
+                                    <span><%= arrData.data4[i].sort %></span>
+                                </div>
+                            </a>     
+                           
+                    <% } %>
+
+                    
+					
+					<!-- <div class="list-item" id="list-item-2">
+						<span>进阶实战</span> <br />
+						<span>Vue项目实战</span>
+					</div>
+					<div class="list-item" id="list-item-3">
+						<span>高级修炼</span> <br />
+						<span>node.js</span>
+					</div>
+					<div class="list-item" id="list-item-4">
+						<span>战力强化</span> <br />
+						<span>React、Angular</span>
+					</div>
+					<div class="list-item" id="list-item-5">
+						<span>移动开发</span> <br />
+						<span>App、微信开发</span>
+					</div>
+					<div class="list-item" id="list-item-6">
+						<span>Python全栈</span> <br />
+						<span>向全栈进击</span>
+					</div> -->
+				</div>
+			</div>
+		</div>
+		<%- include('footer.html')%>
+	<!-- <script>
+		var oNav = document.getElementById('nav');
+		var last = oNav.lastElementChild;
+        //获取导航
+        ajax({
+			method:'GET',
+			url:'/navList',
+			success:function (result) {
+                if (result.status === 0 ){
+                    // console.log(result.data);
+                    for (var i=0;i<result.data.length;i++){
+                        var oA= document.createElement('a');
+                        for (var key in result.data[i]){
+                            switch (key) {
+                                case 'navname':
+                                    if (result.data[i][key] === '首页'){
+                                        oA.className = 'active';
+									}
+                                    oA.innerText = result.data[i][key];
+                                    break;
+                                case  'url':
+                                    oA.href = result.data[i][key];
+                                    break;
+                                case  'status':
+                                    if (result.data[i][key] ==='显示'){
+                                        // oA.style.display = 'block';
+									}else {
+                                        oA.style.display = 'none';
+									}
+                            }
+                        }
+                        oNav.insertBefore(oA,last);
+                    }
+                }
+            }
+		});
+        //获取系统信息
+		var footerLogo = document.getElementById('footerLogo');
+        var oNavLogo = document.getElementById('navLogo');
+		var parent = document.getElementById('content-text');
+		var wechat = document.getElementById('wechat');
+		var wechatlogo = document.getElementById('wechatlogo');
+		var oInfo = document.getElementById('info');
+        ajax({
+            method:'GET',
+            url:'/systemList',
+            success:function (result) {
+                if (result.status === 0 ){
+                    // console.log(result.data);
+                    for (var i=0;i<result.data.length;i++){
+                        // var oA= document.createElement('a');
+                        for (var key in result.data[i]){
+                            // console.log(key);
+                            switch (key) {
+                                case 'title':
+                                    var oH1= document.createElement('h1');
+                                    oH1.innerText = result.data[i][key];
+                                    parent.insertBefore(oH1,wechat);
+                                    break;
+                                case  'subheading':
+                                    var oH2= document.createElement('h2');
+                                    oH2.innerText = result.data[i][key];
+                                    parent.insertBefore(oH2,wechat);
+                                    break;
+                                case  'describe':
+                                    var oP= document.createElement('p');
+                                    oP.innerText = result.data[i][key];
+                                    parent.insertBefore(oP,wechat);
+                                    break;
+                                case  'logo':
+                                    var onavIogo= document.createElement('img');
+                                    var ofooterIogo= document.createElement('img');
+                                    onavIogo.src = result.data[i][key];
+                                    ofooterIogo.src = result.data[i][key];
+                                    oNavLogo.appendChild(onavIogo);
+                                    footerLogo.appendChild(ofooterIogo);
+                                    break;
+                                case  'wechatLogo':
+                                    var oWechatLogo= document.createElement('img');
+                                    oWechatLogo.src = result.data[i][key];
+                                    wechatlogo.appendChild(oWechatLogo);
+                                    break;
+                                case  'copyright':
+                                    var oCopyright= document.createElement('span');
+                                    oCopyright.innerText = result.data[i][key];
+                                    oInfo.insertBefore(oCopyright,oInfo.children[0]);
+                                    oInfo.appendChild(oCopyright);
+                                    break;
+                                case  'info':
+                                    var oIfo= document.createElement('span');
+                                    oIfo.innerText = result.data[i][key];
+                                    oInfo.appendChild(oIfo);
+                                    break;
+                            }
+                        }
+                    }
+                }
+            }
+        });
+
+        //获取课程分类信息
+		var item1 = document.getElementById('list-item-1');
+        var item2 = document.getElementById('list-item-2');
+        var item3 = document.getElementById('list-item-3');
+        var item4 = document.getElementById('list-item-4');
+        var item5 = document.getElementById('list-item-5');
+        var item6 = document.getElementById('list-item-6');
+        var contentList = document.getElementById('content-list');
+        ajax({
+            method:'GET',
+            url:'/categoryList',
+            success:function (result) {
+                if (result.status === 0 ){
+                    // console.log(result.data);
+                    for (var i=0;i<result.data.length;i++){
+                        var oDiv= document.createElement('div');
+                        oDiv.className = 'list-item';
+
+                        for (var key in result.data[i]){
+                            // console.log(key);
+							// var index = null;
+                            switch (key) {
+
+                                case 'categoryname':
+                                    var oSpan= document.createElement('span');
+
+                                    oSpan.innerText = result.data[i][key];
+                                    var oBr= document.createElement('br');
+                                    oDiv.appendChild(oSpan);
+                                    oDiv.appendChild(oBr);
+                                    break;
+                                case  'describe':
+                                    var oSpan2= document.createElement('span');
+                                    oSpan2.innerText = result.data[i][key];
+                                    oDiv.appendChild(oSpan2);
+                                    break;
+                                case  'status':
+                                    if (result.data[i][key] === '显示'){
+
+									} else {
+                                        oDiv.style.display='none';
+									}
+                                    break;
+                                case 'id':
+                                    switch (result.data[i][key]) {
+                                        case 1:
+                                            oDiv.onclick = function (ev) {
+												var ev = ev || window.event;
+                                                window.location.href = '/foundation.html';
+                                                sessionStorage.setItem('categoryname',this.firstElementChild.innerHTML);
+                                                // console.log(this.firstElementChild.innerHTML);
+                                            };
+                                            break;
+                                        case 2:
+                                            oDiv.onclick = function (ev) {
+                                                var ev = ev || window.event;
+                                                window.location.href = '/progress.html';
+                                                sessionStorage.setItem('categoryname',this.firstElementChild.innerHTML);
+                                            };
+                                            break;
+                                        case 3:
+                                            oDiv.onclick = function (ev) {
+                                                var ev = ev || window.event;
+                                                window.location.href = '/senior.html';
+                                                sessionStorage.setItem('categoryname',this.firstElementChild.innerHTML);
+                                            };
+                                            break;
+                                        case 4:
+                                            oDiv.onclick = function (ev) {
+                                                var ev = ev || window.event;
+                                                window.location.href = '/strengthen.html';
+                                                sessionStorage.setItem('categoryname',this.firstElementChild.innerHTML);
+                                            };
+                                            break;
+                                        case 5:
+                                            oDiv.onclick = function (ev) {
+                                                var ev = ev || window.event;
+                                                window.location.href = '/mobile.html';
+                                                sessionStorage.setItem('categoryname',this.firstElementChild.innerHTML);
+                                            };
+                                            break;
+                                        case 6:
+                                            oDiv.onclick = function (ev) {
+                                                var ev = ev || window.event;
+                                                window.location.href = '/fullStack.html';
+                                                sessionStorage.setItem('categoryname',this.firstElementChild.innerHTML);
+                                            };
+                                            break;
+                                    }
+                                    break;
+								// default :
+								    // console.log(oSpan.innerText);
+                            }
+                        }
+                        contentList.appendChild(oDiv)
+                    }
+                }
+            }
+        });
+ -->
+
+	</script>
+	</body>
+</html>

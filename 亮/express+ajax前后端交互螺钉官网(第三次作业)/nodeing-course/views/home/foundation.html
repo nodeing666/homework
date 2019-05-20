@@ -1,0 +1,156 @@
+<!-- 零基础入门页 -->
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="/home/css/base.css"/>
+		<link rel="stylesheet" type="text/css" href="/home/css/public.css"/>
+		<link rel="stylesheet" type="text/css" href="/home/css/index.css"/>
+		<link rel="stylesheet" type="text/css" href="/home/css/foundation.css"/>
+		<!-- <script src="./js/ajax.js"></script> -->
+	</head>
+	<body>
+        
+		<%- include('header.html')%>
+		<div id="content" class="content">
+			<div class="wrap">
+				<div class="group-list clearfix">
+					<h2 id="h2">
+						<%= arrData.data4.course_class%>  &nbsp; 共188集
+                    </h2>
+                    
+					<%- include('course.html')%>
+				</div>
+			</div>
+		</div>
+		
+        <%- include('footer.html')%>
+		<!-- <script>
+            var data = sessionStorage.getItem('categoryname');
+            // console.log(name);
+            //处理导航渲染
+            var oNav = document.getElementById('nav');
+            var last = oNav.lastElementChild;
+            //获取导航
+            ajax({
+                method:'GET',
+                url:'/navList',
+                success:function (result) {
+                    if (result.status === 0 ){
+                        // console.log(result.data);
+                        for (var i=0;i<result.data.length;i++){
+                            var oA= document.createElement('a');
+                            for (var key in result.data[i]){
+                                switch (key) {
+                                    case 'navname':
+                                        if (result.data[i][key] === '首页'){
+                                            oA.className = 'active';
+                                        }
+                                        oA.innerText = result.data[i][key];
+                                        break;
+                                    case  'url':
+                                        oA.href = result.data[i][key];
+                                        break;
+                                    case  'status':
+                                        if (result.data[i][key] ==='显示'){
+                                            // oA.style.display = 'block';
+                                        }else {
+                                            oA.style.display = 'none';
+                                        }
+                                }
+                            }
+                            oNav.insertBefore(oA,last);
+                        }
+                    }
+                }
+            });
+            //处理系统信息渲染
+            var footerLogo = document.getElementById('footerLogo');
+            var oNavLogo = document.getElementById('navLogo');
+
+            var oInfo = document.getElementById('info');
+            ajax({
+                method:'GET',
+                url:'/systemList',
+                success:function (result) {
+                    if (result.status === 0 ){
+                        // console.log(result.data);
+                        for (var i=0;i<result.data.length;i++){
+                            // var oA= document.createElement('a');
+                            for (var key in result.data[i]){
+                                // console.log(key);
+                                switch (key) {
+                                    case  'logo':
+                                        var onavIogo= document.createElement('img');
+                                        var ofooterIogo= document.createElement('img');
+                                        onavIogo.src = result.data[i][key];
+                                        ofooterIogo.src = result.data[i][key];
+                                        oNavLogo.appendChild(onavIogo);
+                                        footerLogo.appendChild(ofooterIogo);
+                                        break;
+                                    case  'copyright':
+                                        var oCopyright= document.createElement('span');
+                                        oCopyright.innerText = result.data[i][key];
+                                        oInfo.insertBefore(oCopyright,oInfo.children[0]);
+                                        oInfo.appendChild(oCopyright);
+                                        break;
+                                    case  'info':
+                                        var oIfo= document.createElement('span');
+                                        oIfo.innerText = result.data[i][key];
+                                        oInfo.appendChild(oIfo);
+                                        break;
+                                }
+                            }
+                        }
+                    }
+                }
+            });
+
+            //获取课程分类
+
+			//获取具体课程
+			var oH2 = document.getElementById('h2');
+			var row = document.getElementById('row');
+
+			oH2.innerText = data+"   共188集";
+            ajax({
+                method:'POST',
+                url:'/course',
+				data:'data='+data,
+                success:function (result) {
+                    // console.log(result);
+                    if (result.status === 0 ){
+                        // console.log(result.data);
+                        for (var i=0;i<result.data.length;i++){
+                            var oDiv= document.createElement('div');
+                            oDiv.className= 'group-list-item';
+                            for (var key in result.data[i]){
+                                switch (key) {
+                                    case 'coursename':
+                                        var oP= document.createElement('p');
+                                        oP.innerText = result.data[i][key];
+                                        oDiv.appendChild(oP);
+                                        break;
+                                    case 'number':
+                                        var oP2= document.createElement('p');
+										var span1 = document.createElement('span');
+										span1.className = 'iconfont';
+										span1.innerHTML = '&#xe6cc;';
+										oP2.appendChild(span1);
+                                        var span2 = document.createElement('span');
+                                        span2.innerText = '共'+result.data[i][key]+'集';
+                                        oP2.appendChild(span2);
+                                        oDiv.appendChild(oP2);
+                                        break;
+                                }
+                            }
+                            row.appendChild(oDiv);
+                        }
+
+                    }
+                }
+            });
+		</script> -->
+	</body>
+</html>

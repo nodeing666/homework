@@ -1,0 +1,232 @@
+﻿		<%- include('header_list.html')%>
+
+		<div class="main-container" id="main-container">
+			<script type="text/javascript">
+				try{ace.settings.check('main-container' , 'fixed')}catch(e){}
+			</script>
+
+			<div class="main-container-inner">
+				<a class="menu-toggler" id="menu-toggler" href="#">
+					<span class="menu-text"></span>
+				</a>
+
+				<%- include('sidebar.html') %>
+
+				<div class="main-content">
+					<div class="breadcrumbs" id="breadcrumbs">
+						<script type="text/javascript">
+							try{ace.settings.check('breadcrumbs' , 'fixed')}catch(e){}
+						</script>
+
+						<ul class="breadcrumb">
+							<li>
+								<i class="icon-home home-icon"></i>
+								<a href="index.html">首页</a>
+							</li>
+							<li class="active">课程列表</li>
+						</ul><!-- .breadcrumb -->
+
+						<div class="nav-search" id="nav-search">
+							<form class="form-search">
+								<span class="input-icon">
+									<input type="text" placeholder="Search ..." class="nav-search-input" id="nav-search-input" autocomplete="off" />
+									<i class="icon-search nav-search-icon"></i>
+								</span>
+							</form>
+						</div><!-- #nav-search -->
+					</div>
+
+					<div class="page-content">
+
+						<div class="page-header">
+							<h1>
+								课程列表								
+							</h1>
+						</div><!-- /.page-header -->
+
+
+
+						<!--表格-->
+
+						<div class="table-responsive">
+							<table id="sample-table-1" class="table table-striped table-bordered table-hover center">
+								<thead>
+									<tr>
+									 
+										<th class="center">编号</th>
+										<th class="center">课程名称</th>
+										<th class="hidden-480 center">课程地址</th>
+										<th class="hidden-480 center">课程分类</th>
+										<th class="center">
+											<i class="icon-time bigger-110 hidden-480"></i>
+											课时数
+										</th>
+										<th class="center">课程状态</th>
+
+										<th width="80px;" class="center">操作</th>
+									</tr>
+								</thead>
+
+								<tbody>
+
+									<% for (var i = 0; i < data.length; i++) {%>
+										<tr>
+											<td><%= data[i].id %></td>
+											<td><%= data[i].course_name %></td>
+											<td><%= data[i].course_url %></td>
+											<td><%= data[i].course_class %></td>
+											<td><%= data[i].course_num %></td>
+											<td><%= data[i].course_status %></td>
+
+											<td>
+												<div class="visible-md visible-lg hidden-sm hidden-xs btn-group center">
+													
+	
+													<a href='/admin/course/edit?id=<%= data[i].id %>' class="btn btn-xs btn-info">
+														<i class="icon-edit bigger-120"></i>
+													</a>
+													&nbsp;
+													<button class="btn btn-xs btn-danger" id="btn" type="button">
+														<i class="icon-trash bigger-120"></i>
+													</button>
+	
+												</div>
+		
+											</td>
+										</tr>
+									<% } %>	
+									<!-- <tr class="">
+										 
+										<td>
+											1
+										</td>
+										<td>html+css基础入门</td>
+										<td class="hidden-480">http://edu.nodeing.com/my/course/1</td>
+										<td>零基础入门</td>
+										<td>123</td>
+
+										<td class="hidden-480">
+												完结
+										</td>
+
+										<td>
+											<div class="visible-md visible-lg hidden-sm hidden-xs btn-group center">
+												
+
+												<a href='./course_edit.html' class="btn btn-xs btn-info">
+													<i class="icon-edit bigger-120"></i>
+												</a>
+												&nbsp;
+												<button class="btn btn-xs btn-danger">
+													<i class="icon-trash bigger-120"></i>
+												</button>
+
+											</div>
+
+										</td>
+									</tr> -->
+
+									<!-- <tr class="">
+									 
+
+										<td>
+											2
+										</td>
+										<td>html+css企业网站实战</td>
+										<td class="hidden-480">http://edu.nodeing.com/my/course/2</td>
+										<td>前端开发</td>
+										<td>56</td>
+
+										<td class="hidden-480">
+											完结
+										</td>
+
+										<td>
+											<div class="visible-md visible-lg hidden-sm hidden-xs btn-group center">
+												
+
+												<button class="btn btn-xs btn-info">
+													<i class="icon-edit bigger-120"></i>
+												</button>
+												&nbsp;
+												<button class="btn btn-xs btn-danger">
+													<i class="icon-trash bigger-120"></i>
+												</button>
+
+											</div>
+
+										</td>
+									</tr> -->
+
+
+									<!-- <tr class="">
+									 
+
+										<td>
+											3
+										</td>
+										<td>vue全家桶</td>
+										<td class="hidden-480">http://edu.nodeing.com/my/course/53</td>
+										<td>前端开发</td>
+										<td>210</td>
+
+										<td class="hidden-480">
+												更新中
+										</td>
+
+										<td>
+											<div class="visible-md visible-lg hidden-sm hidden-xs btn-group center">
+												
+
+												<button class="btn btn-xs btn-info">
+													<i class="icon-edit bigger-120"></i>
+												</button>
+												&nbsp;
+												<button class="btn btn-xs btn-danger">
+													<i class="icon-trash bigger-120"></i>
+												</button>
+
+											</div>
+
+										</td>
+									</tr> -->
+
+
+								</tbody>
+							</table>
+						</div>
+
+					</div>
+				</div><!-- /.main-content -->
+			
+			</div><!-- /.main-container-inner -->
+
+			<a href="#" id="btn-scroll-up" class="btn-scroll-up btn btn-sm btn-inverse">
+				<i class="icon-double-angle-up icon-only bigger-110"></i>
+			</a>
+		</div><!-- /.main-container -->
+
+
+		<%- include('footer.html')%>
+
+		<script src="/admin/js/jquery-2.0.3.min.js"></script>
+
+		<script>
+			$(function () {
+				$('#sample-table-1').on('click','#btn', function () {
+					var courseId = $(this).closest('tr').find('td').eq(0).html();
+					$.get('/admin/course/list/delete', {courseId: courseId} , function (result) {
+						if (result.success === 'success') {
+							alert(result.data);
+							window.location.reload();
+						} else {
+							alert(result.data);
+						}
+					});
+				})
+			});
+		</script>
+	
+</body>
+</html>
+

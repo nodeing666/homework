@@ -1,0 +1,230 @@
+﻿		<%-  include('header_list.html')%>
+		<div class="main-container" id="main-container">
+			<script type="text/javascript">
+				try{ace.settings.check('main-container' , 'fixed')}catch(e){}
+			</script>
+
+			<div class="main-container-inner">
+				<a class="menu-toggler" id="menu-toggler" href="#">
+					<span class="menu-text"></span>
+				</a>
+
+				<%- include('sidebar.html') %>
+
+				<div class="main-content">
+					<div class="breadcrumbs" id="breadcrumbs">
+						<script type="text/javascript">
+							try{ace.settings.check('breadcrumbs' , 'fixed')}catch(e){}
+						</script>
+
+						<ul class="breadcrumb">
+							<li>
+								<i class="icon-home home-icon"></i>
+								<a href="index.html">首页</a>
+							</li>
+							<li class="active">课程分类列表</li>
+						</ul><!-- .breadcrumb -->
+
+						<div class="nav-search" id="nav-search">
+							<form class="form-search">
+								<span class="input-icon">
+									<input type="text" placeholder="Search ..." class="nav-search-input" id="nav-search-input" autocomplete="off" />
+									<i class="icon-search nav-search-icon"></i>
+								</span>
+							</form>
+						</div><!-- #nav-search -->
+					</div>
+
+					<div class="page-content">
+
+						<div class="page-header">
+							<h1>
+								课程分类列表								
+							</h1>
+						</div><!-- /.page-header -->
+
+
+
+						<!--表格-->
+
+						<div class="table-responsive">
+							<table id="sample-table-1" class="table table-striped table-bordered table-hover center">
+								<thead>
+									<tr>
+									 
+										<th class="center">编号</th>
+										<th class="center">分类名称</th>
+										<th class="center">分类地址</th>
+										<th class="hidden-480 center">分类排序</th>
+										<th class="hidden-480 center">分类状态</th>
+										<th class="hidden-480 center">分类图标</th>
+										<th class="center">
+											<i class="icon-time bigger-110 hidden-480"></i>
+											分类描述
+										</th>
+										 
+
+										<th width="80px;" class="center">操作</th>
+									</tr>
+								</thead>
+
+								<tbody>
+									
+									<% for (var i = 0; i < data.length; i++) {%>
+										<tr>
+											<td><%= data[i].id %></td>
+											<td><%= data[i].name %></td>
+											<td><%= data[i].url %></td>
+
+											<td><%= data[i].sort %></td>
+											<td><%= data[i].status %></td>
+											<td><%= data[i].icon %></td>
+											<td><%= data[i].description %></td>
+
+											<td>
+												<div class="visible-md visible-lg hidden-sm hidden-xs btn-group center">
+													
+	
+													<a href='/admin/category/edit?id=<%= data[i].id%>' class="btn btn-xs btn-info" id="update">
+														<i class="icon-edit bigger-120"></i>
+													</a>
+													&nbsp;
+													<button class="btn btn-xs btn-danger" id="delete">
+														<i class="icon-trash bigger-120"></i>
+													</button>
+	
+												</div>
+		
+											</td>
+										</tr>
+									<% } %>	
+								
+										
+									<!-- <tr class="">
+										 
+
+										<td>
+											1
+										</td>
+										<td>零基础入门</td>
+										<td class="hidden-480">1</td>
+										<td>显示</td>
+										<td>/files/system/2018/01-19/15203538a67c790333.png</td>
+										<td>这里放置初级课程</td>
+
+										<td>
+											<div class="visible-md visible-lg hidden-sm hidden-xs btn-group center">
+												
+
+												<a href='./category_edit.html' class="btn btn-xs btn-info">
+													<i class="icon-edit bigger-120"></i>
+												</a>
+												&nbsp;
+												<button class="btn btn-xs btn-danger">
+													<i class="icon-trash bigger-120"></i>
+												</button>
+
+											</div>
+
+										</td>
+									</tr> -->
+
+									<!-- <tr class="">
+									 
+										<td>
+											2
+										</td>
+										<td>进阶实战</td>
+										<td class="hidden-480">2</td>
+										<td>显示</td>
+										<td>/files/system/2018/01-19/15203538a67c790333.png</td>
+										<td>这里放置进阶课程</td>
+
+										<td>
+											<div class="visible-md visible-lg hidden-sm hidden-xs btn-group center">
+												
+												<button class="btn btn-xs btn-info">
+													<i class="icon-edit bigger-120"></i>
+												</button>
+												&nbsp;
+												<button class="btn btn-xs btn-danger">
+													<i class="icon-trash bigger-120"></i>
+												</button>
+
+											</div>
+
+										</td>
+									</tr> -->
+
+
+									<!-- <tr class="">
+									 
+
+										<td>
+											3
+										</td>
+										<td>高级修炼</td>
+										<td class="hidden-480">3</td>
+										<td>显示</td>
+										<td>/files/system/2018/01-19/15203538a67c790333.png</td>
+										<td>这里放置高级课程</td>
+
+										<td>
+											<div class="visible-md visible-lg hidden-sm hidden-xs btn-group center">
+												<button class="btn btn-xs btn-info">
+													<i class="icon-edit bigger-120"></i>
+												</button>
+												&nbsp;
+												<button class="btn btn-xs btn-danger">
+													<i class="icon-trash bigger-120"></i>
+												</button>
+											</div>
+										</td>
+									</tr> -->
+								</tbody>
+							</table>
+						</div>
+
+					</div>
+				</div><!-- /.main-content -->
+			
+			</div><!-- /.main-container-inner -->
+
+			<a href="#" id="btn-scroll-up" class="btn-scroll-up btn btn-sm btn-inverse">
+				<i class="icon-double-angle-up icon-only bigger-110"></i>
+			</a>
+		</div><!-- /.main-container -->
+
+		<%- include('footer.html')%>
+
+		<script src="/admin/js/jquery-2.0.3.min.js"></script>
+
+		<script>
+			$(function () {
+
+				// $('#sample-table-1').on('click', '#update', function () {
+				// 	var categoryId = $(this).closest('tr').find('td').eq(0).html();
+
+				// 	$.get('/admin/category/edit', {categoryId: categoryId} ,function (result) {
+				// 		console.log(result)
+				// 	});
+				// }); 
+
+				$('#sample-table-1').on('click', '#delete', function () {
+					var categoryId = $(this).closest('tr').find('td').eq(0).html();
+					// console.log(categoryId)
+					$.get('/admin/category/list/delete', {categoryId: categoryId} ,function (result) {
+						if (result.success === 'success') {
+							alert(result.data);
+							window.location.reload();
+						} else {
+							alert(result.data)
+						}
+					});
+				});
+			});
+		</script>
+	
+</body>
+</html>
+

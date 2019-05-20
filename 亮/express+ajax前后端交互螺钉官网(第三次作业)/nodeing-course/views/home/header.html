@@ -1,0 +1,23 @@
+<!-- 头部公共部分模版 -->
+
+<div id="top" class="top">
+    <div class="wrap">
+        <div class="logo center" id="navLogo">
+            <img src="/home/img/index/logo.png"/>
+        </div>
+        <div class="nav" id="nav">
+            <% for (var i = 0; i < arrData.data1.length; i++) { %>
+                <a href="<%= arrData.data1[i].nav_url %>"><%= arrData.data1[i].nav_name %></a>
+                
+            <% } %>
+            <!-- <a href="/" class="active">首页</a>
+            <a href="#">学习路线</a>
+            <a href="#">会员</a>
+            <a href="#">转行就业班</a> -->
+            <span>
+                <a href="/signin">登录</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+                <a href="/signup">注册</a>
+            </span>
+        </div>
+    </div>
+</div>

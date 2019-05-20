@@ -1,0 +1,171 @@
+﻿		<%- include('header_add.html')%>
+
+		<div class="main-container" id="main-container">
+			<script type="text/javascript">
+				try{ace.settings.check('main-container' , 'fixed')}catch(e){}
+			</script>
+
+			<div class="main-container-inner">
+				<a class="menu-toggler" id="menu-toggler" href="#">
+					<span class="menu-text"></span>
+				</a>
+
+				<%- include('sidebar.html') %>
+
+				<div class="main-content">
+					<div class="breadcrumbs" id="breadcrumbs">
+						<script type="text/javascript">
+							try{ace.settings.check('breadcrumbs' , 'fixed')}catch(e){}
+						</script>
+
+						<ul class="breadcrumb">
+							<li>
+								<i class="icon-home home-icon"></i>
+								<a href="#">首页</a>
+							</li>
+							<li class="active">添加课程</li>
+						</ul><!-- .breadcrumb -->
+
+						<div class="nav-search" id="nav-search">
+							<form class="form-search">
+								<span class="input-icon">
+									<input type="text" placeholder="Search ..." class="nav-search-input" id="nav-search-input" autocomplete="off" />
+									<i class="icon-search nav-search-icon"></i>
+								</span>
+							</form>
+						</div><!-- #nav-search -->
+					</div>
+
+					<div class="page-content">
+
+						<div class="page-header">
+							<h1>
+								添加课程								
+							</h1>
+						</div><!-- /.page-header -->
+
+					<form class="form-horizontal" role="form">
+							<div class="form-group">
+								<label class="col-sm-2 control-label no-padding-right" for="form-field-1">课程名称:</label>
+
+								<div class="col-sm-10" id="course_name">
+									<input type="text" id="form-field-1" placeholder="" class="col-xs-10 col-sm-5">
+								</div>
+							</div>
+
+
+							<div class="form-group">
+								<label class="col-sm-2 control-label no-padding-right" for="form-field-2">课程地址:</label>
+
+								<div class="col-sm-10" id="coures_url">
+									<input type="text" id="form-field-2" placeholder="" class="col-xs-10 col-sm-5">
+									<!-- <span class="help-inline col-xs-12 col-sm-7">
+										<span class="middle">如果填写则跳转到外部地址（选填）</span>
+									</span> -->
+								</div>
+							</div>
+							
+							<div class="form-group">
+								<label class="col-sm-2 control-label no-padding-right" for="form-field-2">所属分类:</label>
+
+								<div class="col-sm-10" id="course_class">
+									<select name="cate_id" id="cate_id" style="width:200px;">
+										<option value="0">--请选择分类--</option>
+										<option value="12">零基础入门</option>
+										<option value="11">进阶实战</option>
+										<option value="10">高级修炼</option>
+										<option value="10">战力强化</option>
+										<option value="10">移动开发</option>
+										<option value="10">python全栈</option>
+									</select>
+									
+								</div>
+							</div>
+							
+							<div class="form-group">
+								<label class="col-sm-2 control-label no-padding-right" for="form-field-1">课时数:</label>
+
+								<div class="col-sm-10" id="course_num">
+									<input type="text" id="form-field-1" placeholder="" class="col-xs-10 col-sm-5">
+								</div>
+							</div>
+							
+							<div class="form-group">
+								<label class="col-sm-2 control-label no-padding-right" for="form-field-1">是否完结:</label>
+
+								<div class="col-sm-10">
+									<label class="checkbox-inline" id="course_status">
+										<input type="radio" id="inlineCheckbox1" value="option1" name="status"> <span>完结</span>
+									</label>
+									<label class="checkbox-inline">
+										<input type="radio" id="inlineCheckbox2" value="option2" name="status"> <span>更新中</span>	
+									</label>
+								</div>
+							</div>
+							<div class="form-group">
+							 
+								<div class="col-sm-6 center">
+									<button class="btn btn-primary" id="btn" type="button">保存</button>
+									<button class="btn btn-danger">取消</button>
+								</div>
+							</div>
+						</form>
+
+					</div>
+				</div><!-- /.main-content -->
+			
+			</div><!-- /.main-container-inner -->
+
+			<a href="#" id="btn-scroll-up" class="btn-scroll-up btn btn-sm btn-inverse">
+				<i class="icon-double-angle-up icon-only bigger-110"></i>
+			</a>
+		</div><!-- /.main-container -->
+
+		<%- include('footer.html')%>
+		
+		<script src="/admin/js/jquery-2.0.3.min.js"></script>
+
+		<script>
+			$(function () {
+				$('#btn').click(function () {
+					//课程名称
+					var course_name = $('#course_name input').val()
+
+					var course_url = $('#coures_url input').val();
+					//获取当前选择的option下来菜单的值
+					var course_class = $('#course_class select option:selected').text();
+					//获取当前视屏的状态
+
+					//当前课程更新数量
+					var course_num = $('#course_num input').val();
+
+					//当前课程更新状态
+					var course_status = $(".checkbox-inline input[name='status']:checked").next("span").html();
+
+					// console.log(course_name)
+					if (course_name.length == ''  || course_url.length == '') {
+						alert('课程名称跟地址不能为空');
+						return;
+					}
+
+					$.get('/admin/course/add/getCourse', {course_name: course_name} , function (result) {
+						
+						if (result.success === 'error') {
+							alert(result.data);
+						} else {
+							$.post('/admin/course/add/addCourse', {course_name: course_name, course_url: course_url, course_class: course_class,course_num: course_num, course_status: course_status} ,function (result) {
+								if (result.success === 'success') {
+									alert(result.data);
+									window.location.reload();
+								} else {
+									alert(result.data);
+								}
+							});
+						}
+					});
+				});
+			});
+		</script>
+</body>
+</html>
+

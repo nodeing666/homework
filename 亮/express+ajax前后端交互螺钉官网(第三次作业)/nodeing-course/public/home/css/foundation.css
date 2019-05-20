@@ -1,0 +1,59 @@
+.content{
+	background-color: #F7F9F9;
+	background-image: none;
+}
+.group-list{
+	height: 651px;
+	background: url(../img/bag/bg7.png) no-repeat ;
+	background-size: auto;
+}
+.group-list h2{
+	padding-top: 23px;
+    padding-left: 121px;
+    box-sizing: border-box;
+    font-size: 29px;
+    font-weight: normal;
+    margin-bottom: 52px;
+}
+.group-list .row{
+	margin-top: 23px;
+	margin-left: 76px;
+}
+.group-list .group-list-item{
+	float: left;
+	width: 200px;
+	height: 205px;
+	border-radius: 11px;
+	text-align: center;
+	background-color: white;
+	margin-left: 24px;
+	margin-bottom: 25px;
+}
+.group-list .group-list-item:nth-of-type(1){
+	/*margin-left: 0px;*/
+}
+.group-list .group-list-item p{
+	font-size: 14px;
+
+}
+.group-list .group-list-item p span{
+	color: #E95D91;
+}
+.group-list .group-list-item p:nth-of-type(1){
+	padding-top: 71px;
+	box-sizing: border-box;
+}
+.group-list .group-list-item p:nth-of-type(2){
+	/*margin-top: 60px;*/
+	width: 108px;
+	height: 30px;
+	background-color: #F7F9F9;
+	margin: 60px auto;
+	line-height: 30px;
+	border-radius: 16px;
+}
+.group-list .group-list-item p:nth-of-type(2) span:nth-of-type(2){
+	color: #000;
+}
+
+
